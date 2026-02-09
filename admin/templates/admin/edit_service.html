@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+
+{% block title %}{{ 'New Service' if is_new else 'Edit Service' }}{% endblock %}
+
+{% block body %}
+<div class="flex h-screen bg-gray-100">
+    <!-- Sidebar (same narrow version) -->
+    <aside class="admin-sidebar w-16 flex-shrink-0 shadow-xl">
+        <!-- Minimal sidebar for more space -->
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-8 py-4 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800">{{ 'New Service' if is_new else 'Edit Service' }}</h2>
+                    <p class="text-gray-600 text-sm mt-1">Configure service details and features</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="{{ url_for('services_list') }}"
+                        class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">Cancel</a>
+                    <button onclick="saveService()"
+                        class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">Save Service</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-8 max-w-5xl mx-auto">
+            <form id="serviceForm" class="space-y-6">
+                <!-- Basic Info -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Basic Information</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Service Title *</label>
+                            <input type="text" name="title" value="{{ service.title }}"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                            <p class="text-xs text-gray-500 mt-1">The main name of the service.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subtitle</label>
+                            <input type="text" name="subtitle" value="{{ service.subtitle }}"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            <p class="text-xs text-gray-500 mt-1">A brief catchphrase describing the service.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                            <textarea name="description" rows="4"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md">{{ service.description }}</textarea>
+                            <p class="text-xs text-gray-500 mt-1">Full description displayed on the service detail page.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Order</label>
+                                <input type="number" name="order" value="{{ service.order or 0 }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                <p class="text-xs text-gray-500 mt-1">Sort order (lowest first).</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
+                                <select name="status" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                    <option value="draft" {% if service.status=='draft' %}selected{% endif %}>Draft
+                                    </option>
+                                    <option value="published" {% if service.status=='published' %}selected{% endif %}>
+                                        Published</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Featured</label>
+                                <select name="featured" class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                    <option value="false" {% if not service.featured %}selected{% endif %}>No</option>
+                                    <option value="true" {% if service.featured %}selected{% endif %}>Yes</option>
+                                </select>
+                                <p class="text-xs text-gray-500 mt-1">Highlight on homepage?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Media</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Image URL</label>
+                            <input type="text" name="image" value="{{ service.image }}"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                placeholder="/assets/services/...">
+                            <p class="text-xs text-gray-500 mt-1">Path to the representative image.</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Icon</label>
+                            <input type="text" name="icon" value="{{ service.icon }}"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="icon-name">
+                            <p class="text-xs text-gray-500 mt-1">Icon class name or filename.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URL -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">URL</h3>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Page URL</label>
+                        <input type="text" name="url" value="{{ service.url }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                            placeholder="/services/service-name.html">
+                        <p class="text-xs text-gray-500 mt-1">The publicly accessible URL for this service page.</p>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-800">Features</h3>
+                        <button type="button" onclick="addFeature()"
+                            class="text-sm text-accent hover:text-yellow-600 font-medium">+ Add Feature</button>
+                    </div>
+                    <div id="features-container" class="space-y-3">
+                        {% for feature in service.features %}
+                        <div class="flex gap-2 items-center">
+                            <input type="text" name="features" value="{{ feature }}"
+                                class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-accent focus:border-accent"
+                                placeholder="Feature description">
+                            <button type="button" onclick="this.parentElement.remove()"
+                                class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% if not service.features %}
+                    <p id="no-features-msg" class="text-sm text-gray-500 italic mt-2">No features added yet.</p>
+                    {% endif %}
+                </div>
+
+                <!-- JSON Preview -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-sm font-bold text-gray-700 mb-2">JSON Configuration</h3>
+                    <pre
+                        class="bg-white p-4 rounded border text-xs overflow-x-auto">{{ service | tojson(indent=2) }}</pre>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script>
+    function addFeature() {
+        const container = document.getElementById('features-container');
+        const noFeaturesMsg = document.getElementById('no-features-msg');
+        if (noFeaturesMsg) noFeaturesMsg.style.display = 'none';
+
+        const div = document.createElement('div');
+        div.className = 'flex gap-2 items-center';
+        div.innerHTML = `
+            <input type="text" name="features" 
+                class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-accent focus:border-accent"
+                placeholder="Feature description">
+            <button type="button" onclick="this.parentElement.remove()" 
+                class="p-2 text-gray-400 hover:text-red-500 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+            </button>
+        `;
+        container.appendChild(div);
+    }
+
+    async function saveService() {
+        const form = document.getElementById('serviceForm');
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // Handle arrays manually
+        data.features = formData.getAll('features').filter(f => f.trim() !== '');
+
+        // Convert featured to boolean
+        data.featured = data.featured === 'true';
+        data.order = parseInt(data.order) || 0;
+
+        const serviceId = '{{ service.id or "" }}' || data.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const isNew = {{ is_new| tojson
+    }};
+    const baseUrl = '{{ url_for("edit_service", service_id=service.id) if not is_new else "/admin/services/" }}';
+    const url = isNew ? baseUrl + serviceId + '/edit' : baseUrl;
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        window.location.href = '{{ url_for("services_list") }}';
+    } else {
+        alert('Error: ' + result.message);
+    }
+}
+</script>
+{% endblock %}

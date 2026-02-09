@@ -1,0 +1,60 @@
+{
+  "company": {
+    "name": "PhilanthroForge",
+    "tagline": "Forging the Next Era of Fundraising",
+    "description": "Expert nonprofit fundraising consultants helping organizations transform their fundraising strategy."
+  },
+  "contact": {
+    "email": "info@philanthroforge.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Main Street, City, State 12345"
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/philanthroforge",
+    "twitter": "",
+    "facebook": "",
+    "instagram": ""
+  },
+  "links": {
+    "services": [
+      {
+        "text": "Digital Fundraising",
+        "url": "/services/digital-fundraising-strategy.html"
+      },
+      {
+        "text": "Donor Analysis",
+        "url": "/services/donor-behaviour-analysis-revenue-growth.html"
+      },
+      {
+        "text": "Website Optimization",
+        "url": "/services/website-donation-optimization.html"
+      }
+    ],
+    "company": [
+      {
+        "text": "About Us",
+        "url": "/about.html"
+      },
+      {
+        "text": "Case Studies",
+        "url": "/case-studies.html"
+      },
+      {
+        "text": "Contact",
+        "url": "/lets-talk.html"
+      }
+    ],
+    "legal": [
+      {
+        "text": "Privacy Policy",
+        "url": "/privacy-policy.html"
+      },
+      {
+        "text": "Terms & Conditions",
+        "url": "/terms-and-conditions.html"
+      }
+    ]
+  },
+  "copyright": "\u00a9 2026 PhilanthroForge. All rights reserved.",
+  "updated_at": "2026-02-09T10:18:32.912169"
+}

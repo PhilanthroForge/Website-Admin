@@ -1,0 +1,32 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/404",
+        "title": "Page Not Found - PhilanthroForge",
+        "slug": "404"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div class=\"container mx-auto px-6 py-4 flex justify-between items-center\">\n<a class=\"flex items-center gap-3\" href=\"index.html\"><img alt=\"PhilanthroForge Logo\" class=\"h-10 w-auto\" src=\"assets/Folder/Philanthro%20logo.png\"/></a>\n<div class=\"hidden md:flex space-x-8 items-center\">\n<a class=\"hover:text-accent transition-colors\" href=\"index.html\">Home</a>\n<div class=\"relative group\">\n<button class=\"hover:text-accent flex items-center gap-1 transition-colors\">Services<svg class=\"w-4 h-4\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M19 9l-7 7-7-7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg></button>\n<div class=\"absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-xl py-2 hidden group-hover:block transition-all\">\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/digital-fundraising-strategy.html\">Digital\n                            Fundraising Strategy</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/consultancy-advisory.html\">Consultancy &amp;\n                            Advisory</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/website-donation-optimization.html\">Website &amp;\n                            Donation Optimization</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/donation-form-optimization.html\">Donation\n                            Form Optimization</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/fundraising-campaign-journey-design.html\">Fundraising\n                            Campaign Design</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/donor-behaviour-analysis-revenue-growth.html\">Donor Behaviour Analysis</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/csr-major-donor-support.html\">CSR &amp;\n                            Major\n                            Donor Support</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"services/brand-identity-impact-communication.html\">Brand\n                            Identity</a>\n</div>\n</div>\n<div class=\"relative group\">\n<button class=\"hover:text-accent flex items-center gap-1 transition-colors\">Case Studies<svg class=\"w-4 h-4\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M19 9l-7 7-7-7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg></button>\n<div class=\"absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-xl py-2 hidden group-hover:block transition-all\">\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"case-studies/rewarding-generosity.html\">Rewarding Generosity</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"case-studies/turning-supporters-into-fundraisers.html\">Turning\n                            Supporters Into Fundraisers</a>\n<a class=\"block px-4 py-2 hover:bg-gray-100\" href=\"case-studies/integrated-ecosystems.html\">Integrated Ecosystems</a>\n</div>\n</div>\n<a class=\"bg-accent text-primary px-5 py-2 rounded-md font-bold uppercase hover:bg-yellow-400 transition-colors\" href=\"lets-talk.html\">Let's\n                    Talk</a>\n</div>\n</div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "404",
+            "content": "<main class=\"flex-grow container mx-auto px-6 py-24 text-center\">\n<h1 class=\"text-9xl font-bold text-primary mb-4\">404</h1>\n<h2 class=\"text-3xl font-bold text-gray-800 mb-6\">Page Not Found</h2>\n<p class=\"text-xl text-gray-600 mb-12 max-w-2xl mx-auto\">The page you are looking for might have been removed,\n            had its name changed, or is temporarily unavailable.</p>\n<a class=\"inline-block bg-accent text-primary px-8 py-4 rounded-md font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg\" href=\"index.html\">Return\n            Home</a>\n</main>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<footer class=\"nordic-footer py-16 mt-auto relative overflow-hidden\">\n<div class=\"container mx-auto px-6 text-center\">\n<p class=\"text-gray-400\">\u00a9 2025 PhilanthroForge. All rights reserved.</p>\n</div>\n</footer>",
+            "images": []
+        }
+    ]
+}

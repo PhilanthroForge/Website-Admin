@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultancy & Advisory - PhilanthroForge</title>
+  <link rel="icon" type="image/png" href="../assets/Folder/favicon%20philanthro.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#f4d03f',
+            'pale-yellow': '#ffeeb0',
+            'dark-gold': '#fcd670',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Open Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style type="text/tailwindcss">
+    @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Rotating Graphic Styles */
+        .sir-circle-wrapper { position: relative; width: 100%; height: 100%; }
+        .sir-rotating-text { position: absolute; inset: 0; animation: sir-rotate 18s linear infinite; }
+        .sir-rotating-text svg { width: 100%; height: 100%; }
+        .sir-rotating-text text { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .theme-dark .sir-rotating-text text { fill: #ffffff; }
+        .theme-light .sir-rotating-text text { fill: #000000; }
+        .sir-logo-center { position: absolute; top: 50%; left: 50%; width: 52%; height: 52%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; }
+        .sir-logo-svg { width: 100%; height: 100%; display: block; animation: sir-rotate-logo 36s linear infinite; }
+        @keyframes sir-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes sir-rotate-logo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+  <link rel="stylesheet" href="../css/nordic-theme.css">
+</head>
+
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+
+  <!-- Navigation -->
+  <!-- Navigation -->
+      <!-- Navigation Component -->
+    <div id="navbar-placeholder"></div>
+
+<main class="flex-grow">
+  <!-- START: MAIN -->
+<section class="py-20 bg-gray-50">
+<div class="container-padded max-w-4xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Strategic guidance from experienced fundraising
+          partners.</h1>
+<p class="text-xl text-gray-600 leading-relaxed">
+          Trusted advisors who understand your mission and help your team make stronger decisions.
+        </p>
+</div>
+</section>
+<section class="py-20">
+<div class="container-padded container mx-auto">
+<h2 class="text-3xl font-bold text-center text-primary mb-16 max-w-3xl mx-auto">
+          Comprehensive advisory services to align strategy and execution.
+        </h2>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Column 1 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Strategic Review Sessions</h3>
+<ul class="space-y-3 text-gray-600 text-sm">
+<li>• Regular engagement (monthly or quarterly) with your leadership and fundraising teams</li>
+<li>• Deep-dive discussions on campaigns, initiatives, and strategic questions</li>
+<li>• Framework testing: Is this decision aligned with our data and strategy?</li>
+<li>• Collaborative problem-solving on implementation challenges</li>
+</ul>
+</div>
+<!-- Column 2 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Decision-making support</h3>
+<ul class="space-y-3 text-gray-600 text-sm">
+<li>• Build vs. buy analysis for technology decisions</li>
+<li>• Go-to-market strategy for new initiatives</li>
+<li>• Interpretation of campaign and experiment results</li>
+<li>• Resource allocation and priority-setting guidance</li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Capability building</h3>
+<ul class="space-y-3 text-gray-600 text-sm">
+<li>• Help your team interpret data and draw strategic insights</li>
+<li>• Framework training on measurement, experimentation, and iteration</li>
+<li>• Documentation of decisions and learnings for organizational memory</li>
+<li>• Best practices and playbooks for your specific model</li>
+</ul>
+</div>
+<!-- Column 4 -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Strategic network</h3>
+<ul class="space-y-3 text-gray-600 text-sm">
+<li>• Where appropriate, introductions to aligned partners, vendors, and collaborators</li>
+<li>• Access to our evolving knowledge base and case learnings</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-primary text-white">
+<div class="container-padded max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-8">Ready to collaborate?</h2>
+<div class="bg-white/10 p-8 rounded-lg backdrop-blur-sm mb-12">
+<p class="text-xl font-medium">
+            Request an advisory consultation for your team + PhilanthroForge partner, working together.
+          </p>
+</div>
+<a class="inline-block bg-accent text-primary font-bold text-xl px-10 py-4 rounded-sm hover:bg-white hover:shadow-lg transition-all transform hover:-translate-y-1" href="../lets-talk.html">
+          Request an advisory consultation
+        </a>
+</div>
+</section>
+<!-- END: MAIN -->
+</main>
+
+  <!-- Footer -->
+  <!-- START: FOOTER -->
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+<!-- END: FOOTER -->
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobilePanel = document.getElementById('mobile-menu-panel');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
+    const closeBtn = document.getElementById('close-mobile-menu');
+
+    function toggleMenu() {
+      const isClosed = mobilePanel.classList.contains('translate-x-full');
+      if (isClosed) {
+        mobilePanel.classList.remove('translate-x-full');
+        mobileOverlay.classList.remove('hidden');
+        setTimeout(() => mobileOverlay.classList.remove('opacity-0'), 10);
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobilePanel.classList.add('translate-x-full');
+        mobileOverlay.classList.add('opacity-0');
+        setTimeout(() => mobileOverlay.classList.add('hidden'), 300);
+        document.body.style.overflow = '';
+      }
+    }
+
+    mobileBtn.addEventListener('click', toggleMenu);
+    closeBtn.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+  </script>
+
+    <script src="../js/components.js"></script>
+</body>
+
+</html>

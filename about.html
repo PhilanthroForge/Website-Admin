@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PhilanthroForge</title>
+  <link rel="icon" type="image/png" href="assets/Folder/favicon%20philanthro.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#f4d03f',
+            'pale-yellow': '#ffeeb0',
+            'dark-gold': '#fcd670',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Open Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <style type="text/tailwindcss">
+    @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Rotating Graphic Styles */
+        .sir-circle-wrapper { position: relative; width: 100%; height: 100%; }
+        .sir-rotating-text { position: absolute; inset: 0; animation: sir-rotate 18s linear infinite; }
+        .sir-rotating-text svg { width: 100%; height: 100%; }
+        .sir-rotating-text text { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .theme-dark .sir-rotating-text text { fill: #ffffff; }
+        .theme-light .sir-rotating-text text { fill: #000000; }
+        .sir-logo-center { position: absolute; top: 50%; left: 50%; width: 52%; height: 52%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; }
+        .sir-logo-svg { width: 100%; height: 100%; display: block; animation: sir-rotate-logo 36s linear infinite; }
+        @keyframes sir-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes sir-rotate-logo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+  <!-- Navigation (Mega Menu) -->
+  <!-- Navigation -->
+  <link rel="stylesheet" href="css/nordic-theme.css">
+      <!-- Navigation Component -->
+    <div id="navbar-placeholder"></div>
+
+!-- Mobile Menu Button -->
+  <!-- Subagent Note: Using the same mobile menu button and script as implemented in previous steps -->
+  <button class="md:hidden text-white focus:outline-none p-2" id="mobile-menu-btn">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+      </path>
+    </svg>
+  </button>
+  </div>
+
+  <!-- Mobile Menu Overlay (Hidden by default) -->
+  <div id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black/50 z-40 hidden md:hidden glass-effect backdrop-blur-sm opacity-0 transition-opacity duration-300">
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu-panel"
+    class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-primary z-50 transform translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto md:hidden">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-8">
+        <img src="assets/Folder/Philanthro%20logo.png" alt="Logo" class="h-8 w-auto">
+        <button id="close-mobile-menu"
+          class="text-white hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded"
+          aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+          <!-- Navigation Component -->
+    <div id="navbar-placeholder"></div>
+
+</div>
+  </div>
+  </nav>
+  <main class="flex-grow">
+    <!-- START: MAIN -->
+<section class="pt-20 pb-12 text-center">
+<div class="container mx-auto px-6">
+<h1 class="text-5xl font-bold text-primary mb-4">Our Story</h1>
+<p class="text-xl font-bold text-gray-500 uppercase tracking-widest">Why PhilanthroForge Exists</p>
+</div>
+</section>
+<section class="pb-20">
+<div class="container mx-auto px-6 max-w-6xl">
+<div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+<!-- Left: Image -->
+<div class="rounded-lg overflow-hidden shadow-xl">
+<img alt="Team working together" class="w-full h-full object-cover" src="assets/about_lets_do_this_togetherphilanthropy_has_no_philanthroforge_nonprofit_fundraising_st.jpg"/>
+</div>
+<!-- Right: Content -->
+<div>
+<h2 class="text-3xl font-bold text-primary mb-6">Philanthropy has no shortage of generous people or urgent
+              problems.</h2>
+<p class="text-gray-600 mb-6 leading-relaxed">
+              What it lacks is well-designed systems that connect the two: digital experiences, journeys, and
+              rhythms that make giving simple, meaningful, and repeatable.
+            </p>
+<p class="text-gray-600 mb-8 leading-relaxed">
+              Philanthropy has no shortage of generous people or urgent problems. What it lacks is well-designed systems
+              that connect the two: digital experiences, journeys, and rhythms that make giving simple, meaningful, and
+              repeatable.
+            </p>
+<a class="bg-accent text-primary font-bold uppercase py-4 px-8 rounded-md w-full md:w-auto inline-block text-center hover:opacity-90 transition-opacity" href="lets-talk.html">
+              Lets Do This Together
+            </a>
+</div>
+</div>
+<!-- Bottom Text -->
+<div class="max-w-4xl mx-auto text-center">
+<p class="text-lg text-primary font-medium leading-relaxed">
+            After years working with donor platforms, impact startups, and nonprofit teams—seeing money leak out
+            through clunky donation flows, unclear messaging, and one-off campaigns—PhilanthroForge was created
+            to focus on one thing: forging better digital fundraising systems for mission-driven organizations.
+          </p>
+</div>
+</div>
+</section>
+<section class="py-20 bg-pale-yellow text-primary">
+<div class="container mx-auto px-6 max-w-6xl">
+<!-- Context Grid -->
+<div class="grid md:grid-cols-2 gap-16 items-start mb-24">
+<!-- Left: Image -->
+<div class="rounded-lg overflow-hidden shadow-xl">
+<img alt="Person using phone" class="w-full h-full object-cover" src="assets/about/platforms-logos.jpg"/>
+</div>
+<!-- Right: Text -->
+<div>
+<h3 class="text-2xl font-bold mb-6">Over the last 4 years, we have:</h3>
+<ul class="space-y-4 mb-8 list-none">
+<li class="flex items-start gap-3">
+<span class="font-bold text-xl">•</span>
+<span>Worked with platforms and organizations focused on donors, CSR, and social impact.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="font-bold text-xl">•</span>
+<span>Designed donation journeys, campaigns, and content systems that have helped raise significant new
+                  revenue for nonprofits and social enterprises.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="font-bold text-xl">•</span>
+<span>Blended UX, storytelling, and data to help teams make decisions based on evidence rather than
+                  internal opinions.</span>
+</li>
+</ul>
+<p class="font-medium leading-relaxed">
+              This mix of product, design, and fundraising experience shapes how PhilanthroForge works: listen deeply,
+              map the system, find the highest-leverage changes, and then iterate instead of guessing.
+            </p>
+</div>
+</div>
+<!-- Team / Shaan -->
+<div class="max-w-3xl mx-auto text-center">
+<!-- Shaan Image -->
+<div class="w-48 h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-md border-4 border-white">
+<img alt="Shaan" class="w-full h-full object-cover" src="assets/about/team-founder.jpg"/>
+</div>
+<!-- LinkedIn Button -->
+<a class="inline-block bg-blue-600 text-white font-bold py-2 px-8 rounded mb-12 hover:bg-blue-700 transition-colors" href="#">
+            Linkedin
+          </a>
+<p class="text-primary font-medium mb-8 leading-relaxed">
+            @ PhilanthroForge, the focus is on designing fundraising systems that compound over time instead
+            of one-off campaigns that fade after launch. Every engagement is about building clear donor
+            journeys, stronger retention, and sustainable recurring revenue so leaders can spend less time
+            chasing the next rupee and more time delivering impact.
+          </p>
+<div class="text-4xl text-primary opacity-50 mb-8">”</div>
+<h4 class="font-bold text-xl">Shaan</h4>
+<p class="font-bold mb-1">Innovation Manager:</p>
+<p class="mb-6">PhilanthroForge, Donor Money, SIR Giving, Impact Ecosystem</p>
+<p class="font-bold mb-1">Board Of Advisor</p>
+<p>Donor Money, SIR Giving, Impact Ecosystem</p>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6 max-w-6xl">
+<div class="grid md:grid-cols-2 gap-12">
+<!-- 1. Free Intro Call -->
+<div class="flex gap-6 items-start">
+<div class="w-20 flex-shrink-0">
+<img alt="Icon" class="w-full" src="assets/about_free_intro_call_philanthroforge_free_dignostics.jpg"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-primary mb-3">Free intro call</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                A 30-minute conversation about your mission, digital presence, and current fundraising challenges. You
+                get an initial sense of where the leaks might be and whether we’re the right partner.
+              </p>
+</div>
+</div>
+<!-- 2. Diagnostic -->
+<div class="flex gap-6 items-start">
+<div class="w-20 flex-shrink-0">
+<img alt="Icon" class="w-full" src="assets/about_free_intro_calldiagnostic_philanthroforge_call.jpg"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-primary mb-3">Diagnostic</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                A 2–3 week engagement that produces the Funnel Diagnostic &amp; Growth Blueprint. You can take it and
+                implement in-house, or continue with PhilanthroForge for build + optimization.
+              </p>
+</div>
+</div>
+<!-- 3. Build & Implement -->
+<div class="flex gap-6 items-start">
+<div class="w-20 flex-shrink-0">
+<img alt="Icon" class="w-full" src="assets/about/process-implement.jpg"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-primary mb-3">Build &amp; implement</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                Depending on scope, 4–12 weeks of focused work: redesigning donation UX, forms, campaigns, journeys,
+                decks, dashboards.
+              </p>
+</div>
+</div>
+<!-- 4. Optimize & Handover -->
+<div class="flex gap-6 items-start">
+<div class="w-20 flex-shrink-0">
+<img alt="Icon" class="w-full" src="assets/about_build_implementoptimize_handover_philanthroforge_development_of_donor_jou.jpg"/>
+</div>
+<div>
+<h3 class="text-xl font-bold text-primary mb-3">Optimize &amp; handover</h3>
+<p class="text-gray-600 text-sm leading-relaxed">
+                We test, measure, and refine. We document what’s working and either stay on as an optimization partner
+                or train your internal team to run the system confidently.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white border-t border-gray-200">
+<div class="container-padded grid lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="text-4xl lg:text-5xl font-bold text-neutral-dark mb-6">
+            Book your <span class="text-navy">free</span><br/>consultation now
+          </h2>
+<p class="text-xl text-gray-600 mb-8 max-w-lg">
+            Get free consultation for digital initiatives, insights on your target audiences and website performance
+            analysis.
+          </p>
+</div>
+<!-- Calendar Embed -->
+<div class="bg-white p-2 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+<iframe frameborder="0" height="600" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true" style="border: 0" width="100%"></iframe>
+</div>
+</div>
+</section>
+<!-- END: MAIN -->
+  </main>
+  <!-- Footer -->
+  <!-- Footer -->
+  <!-- START: FOOTER -->
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+<!-- END: FOOTER -->
+  </script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

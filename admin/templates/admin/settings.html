@@ -1,0 +1,434 @@
+{% extends "base.html" %}
+
+{% block title %}Settings{% endblock %}
+
+{% from 'macros/sidebar.html' import render_sidebar %}
+
+{% block body %}
+<div class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    {{ render_sidebar('settings') }}
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-8 py-4">
+                <h2 class="text-2xl font-bold text-gray-800">Settings</h2>
+                <p class="text-gray-600 text-sm mt-1">Configure site and admin panel settings</p>
+            </div>
+        </header>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="px-8 py-4 space-y-2">
+            {% for category, message in messages %}
+            <div
+                class="{% if category == 'success' %}bg-green-50 border-green-200 text-green-800{% else %}bg-red-50 border-red-200 text-red-800{% endif %} border rounded-md p-4 text-sm">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="p-8 max-w-6xl mx-auto">
+            <!-- Tabs -->
+            <div class="mb-6 border-b border-gray-200">
+                <nav class="-mb-px flex space-x-8">
+                    <button onclick="switchTab('site')" id="tab-site"
+                        class="tab-button active border-b-2 border-accent py-4 px-1 text-sm font-medium text-accent">
+                        Site Information
+                    </button>
+                    <button onclick="switchTab('contact')" id="tab-contact"
+                        class="tab-button border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Contact & Social
+                    </button>
+                    <button onclick="switchTab('seo')" id="tab-seo"
+                        class="tab-button border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        SEO & Analytics
+                    </button>
+                    <button onclick="switchTab('admin')" id="tab-admin"
+                        class="tab-button border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Admin Preferences
+                    </button>
+                    <button onclick="switchTab('password')" id="tab-password"
+                        class="tab-button border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Change Password
+                    </button>
+                    <button onclick="switchTab('backup')" id="tab-backup"
+                        class="tab-button border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                        Backup & Restore
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Site Information Tab -->
+            <div id="content-site" class="tab-content">
+                <form id="siteForm" class="bg-white rounded-lg shadow p-6 space-y-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Site Information</h3>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Site Name</label>
+                        <input type="text" name="site_name" value="{{ settings.site.name }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tagline</label>
+                        <input type="text" name="site_tagline" value="{{ settings.site.tagline }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Description</label>
+                        <textarea name="site_description" rows="3"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md">{{ settings.site.description }}</textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Keywords (comma-separated)</label>
+                        <input type="text" name="site_keywords" value="{{ ','.join(settings.site.keywords) }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                    </div>
+
+                    <button type="submit" class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                        Save Site Information
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact & Social Tab -->
+            <div id="content-contact" class="tab-content hidden">
+                <form id="contactForm" class="bg-white rounded-lg shadow p-6 space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" name="contact_email" value="{{ settings.contact.email }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="text" name="contact_phone" value="{{ settings.contact.phone }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                                <textarea name="contact_address" rows="2"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md">{{ settings.contact.address }}</textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Business Hours</label>
+                                <input type="text" name="contact_business_hours"
+                                    value="{{ settings.contact.business_hours }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t pt-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Social Media Links</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">LinkedIn</label>
+                                <input type="url" name="social_linkedin" value="{{ settings.social.linkedin }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    placeholder="https://linkedin.com/company/...">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Twitter / X</label>
+                                <input type="url" name="social_twitter" value="{{ settings.social.twitter }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    placeholder="https://twitter.com/...">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Facebook</label>
+                                <input type="url" name="social_facebook" value="{{ settings.social.facebook }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    placeholder="https://facebook.com/...">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Instagram</label>
+                                <input type="url" name="social_instagram" value="{{ settings.social.instagram }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    placeholder="https://instagram.com/...">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">YouTube</label>
+                                <input type="url" name="social_youtube" value="{{ settings.social.youtube }}"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                                    placeholder="https://youtube.com/...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                        Save Contact & Social
+                    </button>
+                </form>
+            </div>
+
+            <!-- SEO Tab -->
+            <div id="content-seo" class="tab-content hidden">
+                <form id="seoForm" class="bg-white rounded-lg shadow p-6 space-y-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">SEO & Analytics</h3>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Meta Description</label>
+                        <textarea name="seo_meta_description" rows="3"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                            placeholder="Brief description for search engines...">{{ settings.seo.meta_description }}</textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Google Analytics ID</label>
+                        <input type="text" name="seo_google_analytics" value="{{ settings.seo.google_analytics }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                            placeholder="G-XXXXXXXXXX or UA-XXXXXXXXX-X">
+                        <p class="text-xs text-gray-500 mt-1">Your tracking ID from Google Analytics.</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Open Graph Image URL</label>
+                        <input type="text" name="seo_og_image" value="{{ settings.seo.og_image }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                            placeholder="/assets/og-image.jpg">
+                        <p class="text-xs text-gray-500 mt-1">Image shown when sharing the site on social media.</p>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" name="seo_sitemap_enabled" value="true" {% if
+                            settings.seo.sitemap_enabled %}checked{% endif %}
+                            class="h-4 w-4 text-accent border-gray-300 rounded">
+                        <label class="ml-2 block text-sm text-gray-700">Enable Sitemap Generation</label>
+                    </div>
+
+                    <button type="submit" class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                        Save SEO Settings
+                    </button>
+                </form>
+            </div>
+
+            <!-- Admin Preferences Tab -->
+            <div id="content-admin" class="tab-content hidden">
+                <form id="adminForm" class="bg-white rounded-lg shadow p-6 space-y-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Admin Panel Preferences</h3>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Session Timeout (minutes)</label>
+                        <input type="number" name="admin_session_timeout" value="{{ settings.admin.session_timeout }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" min="5" max="120">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Items Per Page</label>
+                        <input type="number" name="admin_items_per_page" value="{{ settings.admin.items_per_page }}"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" min="10" max="100">
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" name="admin_auto_save" value="true" {% if settings.admin.auto_save
+                            %}checked{% endif %} class="h-4 w-4 text-accent border-gray-300 rounded">
+                        <label class="ml-2 block text-sm text-gray-700">Enable Auto-Save</label>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" name="admin_email_notifications" value="true" {% if
+                            settings.admin.email_notifications %}checked{% endif %}
+                            class="h-4 w-4 text-accent border-gray-300 rounded">
+                        <label class="ml-2 block text-sm text-gray-700">Enable Email Notifications</label>
+                    </div>
+
+                    <button type="submit" class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                        Save Admin Preferences
+                    </button>
+                </form>
+            </div>
+
+            <!-- Change Password Tab -->
+            <div id="content-password" class="tab-content hidden">
+                <form id="passwordForm" onsubmit="return changePassword(event)"
+                    class="bg-white rounded-lg shadow p-6 space-y-4 max-w-md">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Change Password</h3>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Current Password</label>
+                        <input type="password" name="current_password"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">New Password</label>
+                        <input type="password" name="new_password" id="new_password"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" required minlength="8">
+                        <p class="text-sm text-gray-500 mt-1">Must be at least 8 characters with uppercase, lowercase,
+                            and numbers</p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Confirm New Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                    </div>
+
+                    <button type="submit" class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                        Change Password
+                    </button>
+                </form>
+            </div>
+
+            <!-- Backup & Restore Tab -->
+            <div id="content-backup" class="tab-content hidden">
+                <div class="space-y-6">
+                    <!-- Backup Section -->
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Create Backup</h3>
+                        <p class="text-gray-600 mb-4">Download a complete backup of all your data including pages,
+                            services, case studies, and settings.</p>
+                        <a href="{{ url_for('create_backup') }}"
+                            class="inline-flex items-center px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10">
+                                </path>
+                            </svg>
+                            Download Backup
+                        </a>
+                    </div>
+
+                    <!-- Restore Section -->
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Restore from Backup</h3>
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                            <div class="flex">
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <p class="ml-3 text-sm text-yellow-700">
+                                    <strong>Warning:</strong> Restoring a backup will replace all current data. A safety
+                                    backup will be created automatically.
+                                </p>
+                            </div>
+                        </div>
+                        <form action="{{ url_for('restore_backup') }}" method="POST" enctype="multipart/form-data"
+                            onsubmit="return confirm('Are you sure you want to restore from this backup? Your current data will be saved as a safety backup.')">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Select Backup File
+                                    (.zip)</label>
+                                <input type="file" name="backup_file" accept=".zip"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                            </div>
+                            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                                Restore Backup
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    function switchTab(tabName) {
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        // Remove active state from all tabs
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.classList.remove('active', 'border-accent', 'text-accent');
+            button.classList.add('border-transparent', 'text-gray-500');
+        });
+
+        // Show selected tab content
+        document.getElementById('content-' + tabName).classList.remove('hidden');
+
+        // Add active state to selected tab
+        const activeTab = document.getElementById('tab-' + tabName);
+        activeTab.classList.add('active', 'border-accent', 'text-accent');
+        activeTab.classList.remove('border-transparent', 'text-gray-500');
+    }
+
+    // Form submissions
+    document.getElementById('siteForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await saveForm(e.target, '/admin/settings/site');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await saveForm(e.target, '/admin/settings/site');
+    });
+
+    document.getElementById('seoForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await saveForm(e.target, '/admin/settings/site');
+    });
+
+    document.getElementById('adminForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        await saveForm(e.target, '/admin/settings/site');
+    });
+
+    async function saveForm(form, url) {
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert('Settings saved successfully!');
+        } else {
+            alert('Error: ' + result.message);
+        }
+    }
+
+    async function changePassword(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const response = await fetch('/admin/settings/password', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert(result.message);
+            form.reset();
+        } else {
+            alert('Error: ' + result.message);
+        }
+
+        return false;
+    }
+</script>
+{% endblock %}

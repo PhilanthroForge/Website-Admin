@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PhilanthroForge - Forging the Next Era of Non-Profit Fundraising</title>
+    <link href="assets/Folder/favicon%20philanthro.png" rel="icon" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50',
+                        accent: '#f4d03f',
+                        'pale-yellow': '#ffeeb0',
+                        'dark-gold': '#fcd670',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter (300-900 weights for premium typography) -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Awwwards Premium Theme -->
+    <link href="css/nordic-theme.css" rel="stylesheet" />
+    <!-- GSAP for Scroll Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+            .card-service {
+                @apply bg-white shadow-lg p-6 rounded-md h-full flex flex-col;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        .sir-circle-wrapper {
+            position: relative;
+            width: 420px;
+            height: 420px;
+        }
+
+        /* Text rotation (faster) */
+        .sir-rotating-text {
+            width: 100%;
+            height: 100%;
+            animation: sir-rotate 18s linear infinite;
+        }
+
+        .sir-rotating-text text {
+            fill: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .sir-logo-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 220px;
+            height: 220px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Logo rotation at half speed (double duration) */
+        .sir-logo-svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            animation: sir-rotate-logo 36s linear infinite;
+        }
+
+        @keyframes sir-rotate {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        @keyframes sir-rotate-logo {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 600px) {
+            .sir-circle-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+            .sir-logo-center {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+    <!-- START: PAGE CONTENT -->
+<!-- END: PAGE CONTENT -->
+    <!-- Mobile Menu Script -->
+    <!-- Awwwards Premium Scripts -->
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/microinteractions.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

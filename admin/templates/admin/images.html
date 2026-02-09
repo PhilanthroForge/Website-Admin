@@ -1,0 +1,415 @@
+{% extends "base.html" %}
+
+{% block title %}Image Manager{% endblock %}
+
+{% block head %}
+<style>
+    .dropzone {
+        border: 3px dashed #cbd5e0;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+    }
+
+    .dropzone.dragover {
+        border-color: #F4D03F;
+        background-color: #fffbeb;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 50;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal.active {
+        display: flex;
+    }
+</style>
+{% endblock %}
+
+{% from 'macros/sidebar.html' import render_sidebar %}
+
+{% block body %}
+<div class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    {{ render_sidebar('images') }}
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-8 py-4">
+                <h2 class="text-2xl font-bold text-gray-800">Image Manager</h2>
+                <p class="text-gray-600 text-sm mt-1">Upload and manage website images</p>
+            </div>
+        </header>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="px-8 py-4 space-y-2">
+            {% for category, message in messages %}
+            <div class="flash-{{ category }} rounded-md p-4 text-sm shadow">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="p-8">
+            <!-- Upload Zone -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Upload Images</h3>
+
+                <div id="dropzone" class="dropzone p-12 text-center cursor-pointer">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                        </path>
+                    </svg>
+                    <p class="text-gray-600 text-lg mb-2">Drag & drop images here</p>
+                    <p class="text-gray-500 text-sm mb-4">or click to browse</p>
+                    <button type="button" onclick="document.getElementById('fileInput').click()"
+                        class="bg-accent text-primary px-6 py-2 rounded-md font-medium hover:bg-yellow-400 transition-colors">
+                        Choose Files
+                    </button>
+                    <input type="file" id="fileInput" multiple accept="image/*" class="hidden">
+                </div>
+
+                <!-- Upload folder selector -->
+                <div class="mt-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Upload to folder:</label>
+                    <select id="uploadFolder"
+                        class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-accent focus:border-accent">
+                        <option value="">Root (assets/)</option>
+                        {% for folder in folders %}
+                        <option value="{{ folder }}" {% if current_folder==folder %}selected{% endif %}>{{ folder }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Upload progress -->
+                <div id="uploadProgress" class="mt-4 hidden">
+                    <div class="bg-gray-200 rounded-full h-2">
+                        <div id="progressBar" class="bg-accent h-2 rounded-full transition-all" style="width: 0%"></div>
+                    </div>
+                    <p id="progressText" class="text-sm text-gray-600 mt-2">Uploading...</p>
+                </div>
+            </div>
+
+            <!-- Folders -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Folders</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {% for folder in folders %}
+                    <a href="{{ url_for('images', folder=folder) }}"
+                        class="p-4 border-2 border-gray-200 rounded-lg hover:border-accent hover:bg-yellow-50 transition-all text-center {% if current_folder == folder %}border-accent bg-yellow-50{% endif %}">
+                        <svg class="w-12 h-12 mx-auto text-yellow-500 mb-2" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                        </svg>
+                        <p class="text-sm font-medium text-gray-800">{{ folder }}</p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Images Grid -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">
+                    Images {% if current_folder %} in /{{ current_folder }}{% endif %}
+                </h3>
+
+                {% if images %}
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {% for image in images %}
+                    <div
+                        class="group relative border-2 border-gray-200 rounded-lg overflow-hidden hover:border-accent transition-all">
+                        <img src="/{{ image.path }}" alt="{{ image.name }}" class="w-full h-32 object-cover">
+                        <div class="p-2 bg-white">
+                            <p class="text-xs text-gray-700 truncate">{{ image.name }}</p>
+                        </div>
+
+                        <!-- Hover Actions -->
+                        <div
+                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                            <button onclick="viewImage('{{ image.path }}', '{{ image.name }}')"
+                                class="bg-white p-2 rounded-md hover:bg-gray-100" title="View">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button onclick="replaceImage('{{ image.path }}', '{{ image.name }}')"
+                                class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600" title="Replace">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                </svg>
+                            </button>
+                            <button onclick="renameImage('{{ image.path }}', '{{ image.name }}')"
+                                class="bg-white p-2 rounded-md hover:bg-gray-100" title="Rename">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button onclick="deleteImage('{{ image.path }}', '{{ image.name }}')"
+                                class="bg-red-500 text-white p-2 rounded-md hover:bg-red-600" title="Delete">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center py-12 text-gray-500">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <p>No images in this folder</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- View Image Modal -->
+<div id="viewModal" class="modal items-center justify-center">
+    <div class="bg-white rounded-lg p-6 max-w-4xl max-h-screen overflow-auto">
+        <div class="flex justify-between items-center mb-4">
+            <h3 id="viewModalTitle" class="text-lg font-bold"></h3>
+            <button onclick="closeModal('viewModal')" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <img id="viewModalImage" src="" alt="" class="max-w-full max-h-96">
+    </div>
+</div>
+
+<!-- Rename Modal -->
+<div id="renameModal" class="modal items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-96">
+        <h3 class="text-lg font-bold mb-4">Rename Image</h3>
+        <input type="text" id="renameInput" class="w-full px-3 py-2 border border-gray-300 rounded-md mb-4"
+            placeholder="New filename">
+        <input type="hidden" id="renameOldPath">
+        <div class="flex gap-3 justify-end">
+            <button onclick="closeModal('renameModal')"
+                class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">Cancel</button>
+            <button onclick="confirmRename()"
+                class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">Rename</button>
+        </div>
+    </div>
+</div>
+
+<!-- Replace Image Modal -->
+<div id="replaceModal" class="modal items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-96">
+        <h3 class="text-lg font-bold mb-4">Replace Image</h3>
+        <p class="text-sm text-gray-600 mb-4">Upload a new file to replace: <strong id="replaceImageName"></strong></p>
+        <input type="file" id="replaceFileInput" accept="image/*"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md mb-4">
+        <input type="hidden" id="replaceExistingPath">
+        <div class="flex gap-3 justify-end">
+            <button onclick="closeModal('replaceModal')"
+                class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">Cancel</button>
+            <button onclick="confirmReplace()"
+                class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Replace</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Drag and drop functionality
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+
+    dropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropzone.classList.add('dragover');
+    });
+
+    dropzone.addEventListener('dragleave', () => {
+        dropzone.classList.remove('dragover');
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+
+        const files = e.dataTransfer.files;
+        handleFiles(files);
+    });
+
+    dropzone.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+        handleFiles(e.target.files);
+    });
+
+    async function handleFiles(files) {
+        const folder = document.getElementById('uploadFolder').value;
+        const progressDiv = document.getElementById('uploadProgress');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+
+        progressDiv.classList.remove('hidden');
+
+        let uploaded = 0;
+        const total = files.length;
+
+        for (let file of files) {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('folder', folder);
+
+            try {
+                const response = await fetch('/admin/images/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    uploaded++;
+                    const progress = (uploaded / total) * 100;
+                    progressBar.style.width = progress + '%';
+                    progressText.textContent = `Uploaded ${uploaded} of ${total} images`;
+                }
+            } catch (error) {
+                console.error('Upload error:', error);
+            }
+        }
+
+        // Reload page after upload
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
+    }
+
+    function viewImage(path, name) {
+        document.getElementById('viewModalTitle').textContent = name;
+        document.getElementById('viewModalImage').src = '/' + path;
+        document.getElementById('viewModal').classList.add('active');
+    }
+
+    function renameImage(path, name) {
+        document.getElementById('renameInput').value = name;
+        document.getElementById('renameOldPath').value = path;
+        document.getElementById('renameModal').classList.add('active');
+    }
+
+    async function confirmRename() {
+        const oldPath = document.getElementById('renameOldPath').value;
+        const newName = document.getElementById('renameInput').value;
+
+        const response = await fetch('/admin/images/rename', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ old_path: oldPath, new_name: newName })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            window.location.reload();
+        } else {
+            alert('Error: ' + result.error);
+        }
+    }
+
+    async function deleteImage(path, name) {
+        if (!confirm(`Are you sure you want to delete "${name}"?`)) {
+            return;
+        }
+
+        const response = await fetch('/admin/images/delete', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ path: path })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            window.location.reload();
+        } else {
+            alert('Error: ' + result.error);
+        }
+    }
+
+    function replaceImage(path, name) {
+        document.getElementById('replaceImageName').textContent = name;
+        document.getElementById('replaceExistingPath').value = path;
+        document.getElementById('replaceFileInput').value = '';
+        document.getElementById('replaceModal').classList.add('active');
+    }
+
+    async function confirmReplace() {
+        const existingPath = document.getElementById('replaceExistingPath').value;
+        const fileInput = document.getElementById('replaceFileInput');
+
+        if (!fileInput.files || fileInput.files.length === 0) {
+            alert('Please select a file to upload');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', fileInput.files[0]);
+        formData.append('existing_path', existingPath);
+
+        try {
+            const response = await fetch('/admin/images/replace', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert(`Image replaced successfully! Old size: ${(result.old_size / 1024).toFixed(1)}KB, New size: ${(result.new_size / 1024).toFixed(1)}KB`);
+                window.location.reload();
+            } else {
+                alert('Error: ' + result.error);
+            }
+        } catch (error) {
+            alert('Error replacing image: ' + error.message);
+        }
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('active');
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,179 @@
+/*
+ * Nordic/Scandinavian Theme
+ * Clean, minimal, light aesthetic with subtle warmth
+ */
+
+:root {
+    /* Nordic Color Palette - Soft, Natural, Clean */
+    --nordic-white: #FFFFFF;
+    --nordic-snow: #F8F9FA;
+    --nordic-mist: #E8ECEF;
+    --nordic-stone: #D1D5DB;
+    --nordic-slate: #6B7280;
+    --nordic-charcoal: #374151;
+    --nordic-midnight: #1F2937;
+
+    /* Accent Colors - Subtle, Natural */
+    --nordic-sage: #8BA888;
+    /* Soft green */
+    --nordic-sky: #7BA4DB;
+    /* Soft blue */
+    --nordic-warmth: #E8B284;
+    /* Warm beige */
+    --nordic-frost: #B4C7E7;
+    /* Light frost blue */
+
+    /* Primary Brand */
+    --nordic-primary: #4A6FA5;
+    /* Calm professional blue */
+    --nordic-accent: #D4A574;
+    /* Warm golden accent */
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Global Nordic Styles */
+body {
+    background-color: var(--nordic-white);
+    color: var(--nordic-midnight);
+    font-family: var(--font-primary);
+}
+
+/* Navigation - Clean White */
+.nordic-nav {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--nordic-mist);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nordic-nav a {
+    color: var(--nordic-charcoal);
+    transition: color 0.2s ease;
+}
+
+.nordic-nav a:hover {
+    color: var(--nordic-primary);
+}
+
+/* Footer - Light Nordic Style */
+.nordic-footer {
+    background: linear-gradient(to bottom, var(--nordic-snow), var(--nordic-white));
+    border-top: 1px solid var(--nordic-mist);
+    color: var(--nordic-charcoal);
+}
+
+.nordic-footer h3 {
+    color: var(--nordic-midnight);
+    font-weight: 600;
+}
+
+.nordic-footer a {
+    color: var(--nordic-slate);
+    transition: color 0.2s ease;
+}
+
+.nordic-footer a:hover {
+    color: var(--nordic-primary);
+}
+
+/* Buttons - Nordic Style */
+.btn-nordic-primary {
+    background-color: var(--nordic-primary);
+    color: var(--nordic-white);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 111, 165, 0.15);
+}
+
+.btn-nordic-primary:hover {
+    background-color: #3d5a87;
+    box-shadow: 0 4px 12px rgba(74, 111, 165, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-nordic-accent {
+    background-color: var(--nordic-accent);
+    color: var(--nordic-midnight);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+}
+
+.btn-nordic-accent:hover {
+    background-color: #c49461;
+    transform: translateY(-1px);
+}
+
+/* Cards - Clean Nordic Style */
+.nordic-card {
+    background-color: var(--nordic-white);
+    border: 1px solid var(--nordic-mist);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nordic-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--nordic-stone);
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.nordic-section {
+    background-color: var(--nordic-white);
+    padding: 5rem 0;
+}
+
+.nordic-section-alt {
+    background-color: var(--nordic-snow);
+    padding: 5rem 0;
+}
+
+/* Hero Section - Nordic Clean */
+.nordic-hero {
+    background: linear-gradient(135deg, #E8ECEF 0%, #F8F9FA 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+/* Typography - Nordic */
+.nordic-heading {
+    color: var(--nordic-midnight);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.nordic-subheading {
+    color: var(--nordic-slate);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.nordic-divider {
+    border-color: var(--nordic-mist);
+}
+
+.nordic-shadow-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nordic-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.nordic-shadow-lg {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}

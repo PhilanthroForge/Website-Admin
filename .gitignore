@@ -1,0 +1,24 @@
+# Helper Files
+.DS_Store
+*.log
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+venv/
+env/
+
+# Database
+*.db
+*.sqlite3
+admin/users.db
+
+# Dynamic Content (if not tracking content)
+# users.db is excluded, but JSON content is tracked.
+
+# IDE
+.vscode/
+.idea/
+
+# Secret config
+.env

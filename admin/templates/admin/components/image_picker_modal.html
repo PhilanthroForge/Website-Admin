@@ -1,0 +1,99 @@
+<!-- Image Picker Modal -->
+<div id="image-picker-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog"
+    aria_modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onclick="closeImagePicker()"></div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl">
+
+                <!-- Header -->
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 border-b border-gray-100">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Select Image</h3>
+                        <button type="button" class="text-gray-400 hover:text-gray-500" onclick="closeImagePicker()">
+                            <span class="sr-only">Close</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="mt-4 border-b border-gray-200">
+                        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                            <button onclick="switchTab('upload')" id="tab-upload"
+                                class="border-accent text-accent whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                Upload
+                            </button>
+                            <button onclick="switchTab('unsplash')" id="tab-unsplash"
+                                class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                Unsplash
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="bg-white px-4 py-4 sm:p-6 h-[500px] overflow-y-auto">
+
+                    <!-- Upload Tab -->
+                    <div id="content-upload" class="space-y-4">
+                        <div class="flex items-center justify-center w-full">
+                            <label for="dropzone-file"
+                                class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                    <svg class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                        </path>
+                                    </svg>
+                                    <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to
+                                            upload</span> or drag and drop</p>
+                                    <p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 5MB)</p>
+                                </div>
+                                <input id="dropzone-file" type="file" class="hidden" accept="image/*"
+                                    onchange="handleFileUpload(this.files[0])" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Unsplash Tab -->
+                    <div id="content-unsplash" class="hidden space-y-4">
+                        <div class="flex gap-2">
+                            <input type="text" id="unsplash-search" placeholder="Search photos..."
+                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm p-2 border"
+                                onkeypress="handleEnter(event)">
+                            <button onclick="searchUnsplash()"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-accent hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                                Search
+                            </button>
+                        </div>
+
+                        <div id="unsplash-results" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <!-- Results will appear here -->
+                            <div class="col-span-full text-center text-gray-400 py-10">
+                                Search for something awesome...
+                            </div>
+                        </div>
+
+                        <div id="unsplash-loading" class="hidden text-center py-10">
+                            <svg class="animate-spin h-8 w-8 text-accent mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
