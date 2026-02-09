@@ -22,7 +22,7 @@ def export_content():
     for block in content_blocks:
         content = block.get('content', '')
         # Ensure we don't duplicate section tags if user added them manually in WYSIWYG
-        if block.get('type') == 'text':
+        if content:
              new_html_content += content + "\n"
         # Since we import as full HTML, we export as full HTML
         

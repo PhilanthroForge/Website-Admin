@@ -8,7 +8,7 @@
     {
       "type": "HEADER",
       "heading": "Page Header",
-      "content": "<header class=\"bg-white py-24 text-center relative overflow-hidden\">\n<div class=\"container-padded relative z-10 max-w-4xl mx-auto\">\n<h1 class=\"text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-dark mb-8 leading-tight\">\n          Forging the <span class=\"text-navy\">Next Era</span> of Non-Profit Fundraising.\n        </h1>\n<p class=\"text-lg md:text-xl text-gray-600 leading-relaxed\">\n          We help non-profits build sustainable, data-driven fundraising systems that scale.\n        </p>\n</div>\n<!-- Hero Background Image (Absolute) -->\n<div class=\"absolute inset-0 z-0 opacity-10\">\n<img src=\"assets/home/hero-background.jpg\" class=\"w-full h-full object-cover\" alt=\"Hero Background\">\n</div>\n</header>",
+      "content": "<div id=\"navbar-placeholder\"></div>\n<header class=\"bg-white py-24 text-center relative overflow-hidden\">\n<div class=\"container-padded relative z-10 max-w-4xl mx-auto\">\n<h1 class=\"text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-dark mb-8 leading-tight\">\n          Forging the <span class=\"text-navy\">Next Era</span> of Non-Profit Fundraising.\n        </h1>\n<p class=\"text-lg md:text-xl text-gray-600 leading-relaxed\">\n          We help non-profits build sustainable, data-driven fundraising systems that scale.\n        </p>\n</div>\n<!-- Hero Background Image (Absolute) -->\n<div class=\"absolute inset-0 z-0 opacity-10\">\n<img src=\"assets/home/hero-background.jpg\" class=\"w-full h-full object-cover\" alt=\"Hero Background\">\n</div>\n</header>",
       "images": [
         {
           "src": "assets/home/hero-background.jpg",
@@ -50,6 +50,12 @@
       "type": "SECTION",
       "heading": "Ready to Start?",
       "content": "<section class=\"py-24 bg-primary text-white text-center\">\n<div class=\"container-padded\">\n<h2 class=\"text-3xl md:text-4xl font-bold mb-6\">Ready to forge your future?</h2>\n<p class=\"text-xl opacity-90 mb-8 max-w-2xl mx-auto\">\nJoin the non-profits that are scaling their impact with system-led fundraising.\n</p>\n<a href=\"lets-talk.html\" class=\"bg-accent text-primary font-bold uppercase py-4 px-10 rounded-sm hover:bg-white transition-colors\">\nStart Forging\n</a>\n</div>\n</section>",
+      "images": []
+    },
+    {
+      "type": "FOOTER",
+      "heading": "Page Footer",
+      "content": "<div id=\"footer-placeholder\"></div>",
       "images": []
     }
   ]
