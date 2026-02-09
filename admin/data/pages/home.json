@@ -1,6 +1,56 @@
 {
-  "title": "PhilanthroForge - Forging the Next Era of Non-Profit Fundraising",
-  "meta_description": "",
-  "content_blocks": [],
-  "last_updated": "2026-02-10T00:09:14.102132"
+  "metadata": {
+    "url": "https://www.philanthroforge.com/",
+    "title": "PhilanthroForge - Forging the Next Era of Non-Profit Fundraising",
+    "slug": "home"
+  },
+  "content_blocks": [
+    {
+      "type": "HEADER",
+      "heading": "Page Header",
+      "content": "<header class=\"bg-white py-24 text-center relative overflow-hidden\">\n<div class=\"container-padded relative z-10 max-w-4xl mx-auto\">\n<h1 class=\"text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-dark mb-8 leading-tight\">\n          Forging the <span class=\"text-navy\">Next Era</span> of Non-Profit Fundraising.\n        </h1>\n<p class=\"text-lg md:text-xl text-gray-600 leading-relaxed\">\n          We help non-profits build sustainable, data-driven fundraising systems that scale.\n        </p>\n</div>\n<!-- Hero Background Image (Absolute) -->\n<div class=\"absolute inset-0 z-0 opacity-10\">\n<img src=\"assets/home/hero-background.jpg\" class=\"w-full h-full object-cover\" alt=\"Hero Background\">\n</div>\n</header>",
+      "images": [
+        {
+          "src": "assets/home/hero-background.jpg",
+          "alt": "Hero Background"
+        }
+      ]
+    },
+    {
+      "type": "SECTION",
+      "heading": "Our Services",
+      "content": "<section class=\"py-24 bg-gray-50\">\n<div class=\"container-padded\">\n<h2 class=\"text-3xl md:text-4xl font-bold text-center text-navy mb-16\">Our Services</h2>\n<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">\n<!-- Service 1 -->\n<div class=\"bg-white rounded-lg shadow-lg overflow-hidden\">\n<div class=\"h-48 overflow-hidden\">\n<img src=\"assets/home/service-digital-strategy.jpg\" class=\"w-full h-full object-cover transform hover:scale-105 transition-transform duration-500\" alt=\"Digital Strategy\">\n</div>\n<div class=\"p-6\">\n<h3 class=\"text-xl font-bold text-primary mb-3\">Digital Fundraising Strategy</h3>\n<p class=\"text-gray-600 mb-4\">Comprehensive audit and strategy to optimize your digital fundraising engine.</p>\n<a href=\"services/digital-fundraising-strategy.html\" class=\"text-primary font-bold hover:text-accent\">Learn More &rarr;</a>\n</div>\n</div>\n<!-- Service 2 -->\n<div class=\"bg-white rounded-lg shadow-lg overflow-hidden\">\n<div class=\"h-48 overflow-hidden\">\n<img src=\"assets/home/service-consultancy.jpg\" class=\"w-full h-full object-cover transform hover:scale-105 transition-transform duration-500\" alt=\"Consultancy\">\n</div>\n<div class=\"p-6\">\n<h3 class=\"text-xl font-bold text-primary mb-3\">Consultancy & Advisory</h3>\n<p class=\"text-gray-600 mb-4\">Expert guidance to navigate complex fundraising challenges.</p>\n<a href=\"services/consultancy-advisory.html\" class=\"text-primary font-bold hover:text-accent\">Learn More &rarr;</a>\n</div>\n</div>\n<!-- Service 3 -->\n<div class=\"bg-white rounded-lg shadow-lg overflow-hidden\">\n<div class=\"h-48 overflow-hidden\">\n<img src=\"assets/home/service-campaign.jpg\" class=\"w-full h-full object-cover transform hover:scale-105 transition-transform duration-500\" alt=\"Campaign Design\">\n</div>\n<div class=\"p-6\">\n<h3 class=\"text-xl font-bold text-primary mb-3\">Campaign Design</h3>\n<p class=\"text-gray-600 mb-4\">Strategic campaign planning and automated donor journeys.</p>\n<a href=\"services/fundraising-campaign-journey-design.html\" class=\"text-primary font-bold hover:text-accent\">Learn More &rarr;</a>\n</div>\n</div>\n</div>\n</div>\n</section>",
+      "images": [
+        {
+          "src": "assets/home/service-digital-strategy.jpg",
+          "alt": "Digital Strategy"
+        },
+        {
+          "src": "assets/home/service-consultancy.jpg",
+          "alt": "Consultancy"
+        },
+        {
+          "src": "assets/home/service-campaign.jpg",
+          "alt": "Campaign Design"
+        }
+      ]
+    },
+    {
+      "type": "SECTION",
+      "heading": "Featured Case Study",
+      "content": "<section class=\"py-24 bg-white\">\n<div class=\"container-padded\">\n<div class=\"flex flex-col lg:flex-row items-center gap-12\">\n<div class=\"lg:w-1/2\">\n<img src=\"assets/home/case-rewarding-generosity.jpg\" class=\"rounded-lg shadow-xl\" alt=\"Rewarding Generosity\">\n</div>\n<div class=\"lg:w-1/2\">\n<h4 class=\"text-accent font-bold uppercase tracking-wider mb-2\">Case Study</h4>\n<h2 class=\"text-3xl md:text-4xl font-bold text-navy mb-6\">Rewarding Generosity</h2>\n<p class=\"text-gray-600 text-lg mb-8\">\nDiscover how we helped a leading non-profit unlock new giving potential by restructuring their donor recognition program.\n</p>\n<a href=\"case-studies/rewarding-generosity.html\" class=\"btn-gold inline-block\">Read Case Study</a>\n</div>\n</div>\n</div>\n</section>",
+      "images": [
+        {
+          "src": "assets/home/case-rewarding-generosity.jpg",
+          "alt": "Rewarding Generosity"
+        }
+      ]
+    },
+    {
+      "type": "SECTION",
+      "heading": "Ready to Start?",
+      "content": "<section class=\"py-24 bg-primary text-white text-center\">\n<div class=\"container-padded\">\n<h2 class=\"text-3xl md:text-4xl font-bold mb-6\">Ready to forge your future?</h2>\n<p class=\"text-xl opacity-90 mb-8 max-w-2xl mx-auto\">\nJoin the non-profits that are scaling their impact with system-led fundraising.\n</p>\n<a href=\"lets-talk.html\" class=\"bg-accent text-primary font-bold uppercase py-4 px-10 rounded-sm hover:bg-white transition-colors\">\nStart Forging\n</a>\n</div>\n</section>",
+      "images": []
+    }
+  ]
 }

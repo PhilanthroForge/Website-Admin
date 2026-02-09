@@ -60,7 +60,17 @@ def export_content():
         if footer:
             footer.insert_before(full_new_soup)
         else:
-            soup.body.append(full_new_soup)
+            if not soup.body:
+                soup.append(soup.new_tag("body"))
+            
+            soup.body.clear()
+            
+            # Append elements from the new soup individually
+            # We need to list() the contents because modifying the tree while iterating can be problematic
+            for element in list(full_new_soup.contents):
+                # We need to extract the element from its current parent (full_new_soup) before appending
+                # but append() usually handles reparenting. Let's try appending directly.
+                soup.body.append(element)
 
     with open(HTML_FILE, 'w', encoding='utf-8') as f:
         f.write(str(soup))
