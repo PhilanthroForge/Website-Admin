@@ -9,8 +9,9 @@ echo "PhilanthroForge Website Modernization"
 echo "============================================================="
 echo ""
 
-BASE_DIR="/Users/bipashahalder/Documents/Philanthroforge_Complete_Clone"
-cd "$BASE_DIR"
+# Get the directory where the script is located
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$BASE_DIR" || exit 1
 
 # Colors
 GREEN='\033[0;32m'
