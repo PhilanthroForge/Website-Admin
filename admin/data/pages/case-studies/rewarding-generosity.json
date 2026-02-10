@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/case-studies/rewarding-generosity",
+        "title": "Rewarding Generosity - PhilanthroForge",
+        "slug": "case-studies/rewarding-generosity"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "../assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "../assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising Strategy"
+                },
+                {
+                    "src": "../assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy & Advisory"
+                },
+                {
+                    "src": "../assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
+                    "alt": "Website & Donation Optimization"
+                },
+                {
+                    "src": "../assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
+                    "alt": "Donation Form Optimization"
+                },
+                {
+                    "src": "../assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
+                    "alt": "Fundraising Campaign Design"
+                },
+                {
+                    "src": "../assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
+                    "alt": "Donor Behaviour Analysis"
+                },
+                {
+                    "src": "../assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
+                    "alt": "CSR & Major Donor Support"
+                },
+                {
+                    "src": "../assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "../assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "../assets/index_turning_supporters_into_active_fundraisers.jpg",
+                    "alt": "Turning Supporters Into Fundraisers"
+                },
+                {
+                    "src": "../assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Section 1",
+            "content": "<section>\n<p class=\"mb-6 text-lg leading-relaxed\">A new matching\u2011rewards platform wanted to encourage donors to give more\n          often by offering rewards on top of every donation. The concept was powerful but unfamiliar, and the digital\n          experience needed to quickly explain \u201cwhy this exists\u201d and \u201chow it works\u201d to both donors and nonprofits.</p>\n<p class=\"text-lg leading-relaxed\">The founding team came with a simple mission: \u201creward people for being\n          generous.\u201d There was no clarity yet on whether this needed a fully coded platform, a white\u2011labeled solution,\n          or even which audience should be served first. Questions like tech stack, product scope, early adopters, and\n          best marketing channels were all open.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Challenges",
+            "content": "<section class=\"bg-gray-50 p-8 rounded-lg border-l-4 border-accent\">\n<h2 class=\"text-2xl font-bold text-primary mb-4\">Challenges</h2>\n<ul class=\"space-y-3 list-disc list-inside text-gray-700\">\n<li>Does this require a custom web client, or can we launch faster on top of an existing giving stack?</li>\n<li>What\u2019s the smallest viable system that proves the rewards model works?</li>\n<li>Who should be the first test group\u2014global nonprofits, existing donor communities, or a focused niche?</li>\n<li>Which channels (LinkedIn, email, Instagram, etc.) make most sense for launch and education?</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "What PhilanthroForge Did",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">What PhilanthroForge Did</h2>\n<ul class=\"space-y-4\">\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Simplify the Journey:</strong> Designed a clear website journey that explains the matching\n              model in three simple steps.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Strategy Strategy:</strong> Facilitated sessions to refine the idea from generic\n              \u201cphilanthropic mission\u201d into a clear, testable product thesis.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Lean Tech Approach:</strong> Recommended a lean tech approach and MVP scope so validation\n              could happen before heavy engineering investment.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Full Donor Journey:</strong> Designed landing pages, donation + rewards flow, and\n              post\u2011donation emails.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Cohesive Presence:</strong> Created content for website, Email, LinkedIn, YouTube, Medium,\n              Facebook, and Instagram.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Real-World Testing:</strong> Ran early campaigns with a defined group of nonprofits and donors\n              to test behaviour.</span>\n</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Section 4",
+            "content": "<section class=\"grid md:grid-cols-3 gap-6\">\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">$250k+</div>\n<div class=\"text-sm opacity-80\">In Matching Rewards Facilitated</div>\n</div>\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">Proof</div>\n<div class=\"text-sm opacity-80\">Thesis Validated with Real Money</div>\n</div>\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">Scale</div>\n<div class=\"text-sm opacity-80\">Reusable Campaign Patterns Established</div>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Takeaways",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">Takeaways</h2>\n<p class=\"text-gray-700 italic border-l-4 border-gray-300 pl-4 py-2\">\n          Founders often start with a beautiful mission but no clarity to materialization. Turning that into a working\n          system means asking hard questions early, choosing the right level of tech, and validating behaviour with a\n          small but real audience.\n        </p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

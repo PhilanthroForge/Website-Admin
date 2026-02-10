@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/about",
+        "title": "About Us - PhilanthroForge",
+        "slug": "about"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising Strategy"
+                },
+                {
+                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy & Advisory"
+                },
+                {
+                    "src": "assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
+                    "alt": "Website & Donation Optimization"
+                },
+                {
+                    "src": "assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
+                    "alt": "Donation Form Optimization"
+                },
+                {
+                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
+                    "alt": "Fundraising Campaign Design"
+                },
+                {
+                    "src": "assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
+                    "alt": "Donor Behaviour Analysis"
+                },
+                {
+                    "src": "assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
+                    "alt": "CSR & Major Donor Support"
+                },
+                {
+                    "src": "assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "assets/index_turning_supporters_into_active_fundraisers.jpg",
+                    "alt": "Turning Supporters Into Fundraisers"
+                },
+                {
+                    "src": "assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Our Story",
+            "content": "<section class=\"pt-20 pb-12 text-center\">\n<div class=\"container mx-auto px-6\">\n<h1 class=\"text-5xl font-bold text-primary mb-4\">Our Story</h1>\n<p class=\"text-xl font-bold text-gray-500 uppercase tracking-widest\">Why PhilanthroForge Exists</p>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Philanthropy has no shortage of generous people or",
+            "content": "<section class=\"pb-20\">\n<div class=\"container mx-auto px-6 max-w-6xl\">\n<div class=\"grid md:grid-cols-2 gap-12 items-center mb-16\">\n<!-- Left: Image -->\n<div class=\"rounded-lg overflow-hidden shadow-xl\">\n<img alt=\"Team working together\" class=\"w-full h-full object-cover\" src=\"assets/about_lets_do_this_togetherphilanthropy_has_no_philanthroforge_nonprofit_fundraising_st.jpg\"/>\n</div>\n<!-- Right: Content -->\n<div>\n<h2 class=\"text-3xl font-bold text-primary mb-6\">Philanthropy has no shortage of generous people or urgent\n              problems.</h2>\n<p class=\"text-gray-600 mb-6 leading-relaxed\">\n              What it lacks is well-designed systems that connect the two: digital experiences, journeys, and\n              rhythms that make giving simple, meaningful, and repeatable.\n            </p>\n<p class=\"text-gray-600 mb-8 leading-relaxed\">\n              Philanthropy has no shortage of generous people or urgent problems. What it lacks is well-designed systems\n              that connect the two: digital experiences, journeys, and rhythms that make giving simple, meaningful, and\n              repeatable.\n            </p>\n<a class=\"bg-accent text-primary font-bold uppercase py-4 px-8 rounded-md w-full md:w-auto inline-block text-center hover:opacity-90 transition-opacity\" href=\"lets-talk.html\">\n              Lets Do This Together\n            </a>\n</div>\n</div>\n<!-- Bottom Text -->\n<div class=\"max-w-4xl mx-auto text-center\">\n<p class=\"text-lg text-primary font-medium leading-relaxed\">\n            After years working with donor platforms, impact startups, and nonprofit teams\u2014seeing money leak out\n            through clunky donation flows, unclear messaging, and one-off campaigns\u2014PhilanthroForge was created\n            to focus on one thing: forging better digital fundraising systems for mission-driven organizations.\n          </p>\n</div>\n</div>\n</section>",
+            "images": [
+                {
+                    "src": "assets/about_lets_do_this_togetherphilanthropy_has_no_philanthroforge_nonprofit_fundraising_st.jpg",
+                    "alt": "Team working together"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Over the last 4 years, we have:",
+            "content": "<section class=\"py-20 bg-pale-yellow text-primary\">\n<div class=\"container mx-auto px-6 max-w-6xl\">\n<!-- Context Grid -->\n<div class=\"grid md:grid-cols-2 gap-16 items-start mb-24\">\n<!-- Left: Image -->\n<div class=\"rounded-lg overflow-hidden shadow-xl\">\n<img alt=\"Person using phone\" class=\"w-full h-full object-cover\" src=\"assets/about_over_the_last_4_years_we_haveworked_with_philanthroforge_worked_with_platforms_an.jpg\"/>\n</div>\n<!-- Right: Text -->\n<div>\n<h3 class=\"text-2xl font-bold mb-6\">Over the last 4 years, we have:</h3>\n<ul class=\"space-y-4 mb-8 list-none\">\n<li class=\"flex items-start gap-3\">\n<span class=\"font-bold text-xl\">\u2022</span>\n<span>Worked with platforms and organizations focused on donors, CSR, and social impact.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"font-bold text-xl\">\u2022</span>\n<span>Designed donation journeys, campaigns, and content systems that have helped raise significant new\n                  revenue for nonprofits and social enterprises.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"font-bold text-xl\">\u2022</span>\n<span>Blended UX, storytelling, and data to help teams make decisions based on evidence rather than\n                  internal opinions.</span>\n</li>\n</ul>\n<p class=\"font-medium leading-relaxed\">\n              This mix of product, design, and fundraising experience shapes how PhilanthroForge works: listen deeply,\n              map the system, find the highest-leverage changes, and then iterate instead of guessing.\n            </p>\n</div>\n</div>\n<!-- Team / Shaan -->\n<div class=\"max-w-3xl mx-auto text-center\">\n<!-- Shaan Image -->\n<div class=\"w-48 h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-md border-4 border-white\">\n<img alt=\"Shaan\" class=\"w-full h-full object-cover\" src=\"assets/about_linkedin_philanthroforge_md_shane_ali_fundraising.jpg\"/>\n</div>\n<!-- LinkedIn Button -->\n<a class=\"inline-block bg-blue-600 text-white font-bold py-2 px-8 rounded mb-12 hover:bg-blue-700 transition-colors\" href=\"#\">\n            Linkedin\n          </a>\n<p class=\"text-primary font-medium mb-8 leading-relaxed\">\n            @ PhilanthroForge, the focus is on designing fundraising systems that compound over time instead\n            of one-off campaigns that fade after launch. Every engagement is about building clear donor\n            journeys, stronger retention, and sustainable recurring revenue so leaders can spend less time\n            chasing the next rupee and more time delivering impact.\n          </p>\n<div class=\"text-4xl text-primary opacity-50 mb-8\">\u201d</div>\n<h4 class=\"font-bold text-xl\">Shaan</h4>\n<p class=\"font-bold mb-1\">Innovation Manager:</p>\n<p class=\"mb-6\">PhilanthroForge, Donor Money, SIR Giving, Impact Ecosystem</p>\n<p class=\"font-bold mb-1\">Board Of Advisor</p>\n<p>Donor Money, SIR Giving, Impact Ecosystem</p>\n</div>\n</div>\n</section>",
+            "images": [
+                {
+                    "src": "assets/about_over_the_last_4_years_we_haveworked_with_philanthroforge_worked_with_platforms_an.jpg",
+                    "alt": "Person using phone"
+                },
+                {
+                    "src": "assets/about_linkedin_philanthroforge_md_shane_ali_fundraising.jpg",
+                    "alt": "Shaan"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Free intro call",
+            "content": "<section class=\"py-20 bg-white\">\n<div class=\"container mx-auto px-6 max-w-6xl\">\n<div class=\"grid md:grid-cols-2 gap-12\">\n<!-- 1. Free Intro Call -->\n<div class=\"flex gap-6 items-start\">\n<div class=\"w-20 flex-shrink-0\">\n<img alt=\"Icon\" class=\"w-full\" src=\"assets/about_free_intro_call_philanthroforge_free_dignostics.jpg\"/>\n</div>\n<div>\n<h3 class=\"text-xl font-bold text-primary mb-3\">Free intro call</h3>\n<p class=\"text-gray-600 text-sm leading-relaxed\">\n                A 30-minute conversation about your mission, digital presence, and current fundraising challenges. You\n                get an initial sense of where the leaks might be and whether we\u2019re the right partner.\n              </p>\n</div>\n</div>\n<!-- 2. Diagnostic -->\n<div class=\"flex gap-6 items-start\">\n<div class=\"w-20 flex-shrink-0\">\n<img alt=\"Icon\" class=\"w-full\" src=\"assets/about_free_intro_calldiagnostic_philanthroforge_call.jpg\"/>\n</div>\n<div>\n<h3 class=\"text-xl font-bold text-primary mb-3\">Diagnostic</h3>\n<p class=\"text-gray-600 text-sm leading-relaxed\">\n                A 2\u20133 week engagement that produces the Funnel Diagnostic &amp; Growth Blueprint. You can take it and\n                implement in-house, or continue with PhilanthroForge for build + optimization.\n              </p>\n</div>\n</div>\n<!-- 3. Build & Implement -->\n<div class=\"flex gap-6 items-start\">\n<div class=\"w-20 flex-shrink-0\">\n<img alt=\"Icon\" class=\"w-full\" src=\"assets/about_build_implement_philanthroforge_how_to_get_more_donation.jpg\"/>\n</div>\n<div>\n<h3 class=\"text-xl font-bold text-primary mb-3\">Build &amp; implement</h3>\n<p class=\"text-gray-600 text-sm leading-relaxed\">\n                Depending on scope, 4\u201312 weeks of focused work: redesigning donation UX, forms, campaigns, journeys,\n                decks, dashboards.\n              </p>\n</div>\n</div>\n<!-- 4. Optimize & Handover -->\n<div class=\"flex gap-6 items-start\">\n<div class=\"w-20 flex-shrink-0\">\n<img alt=\"Icon\" class=\"w-full\" src=\"assets/about_build_implementoptimize_handover_philanthroforge_development_of_donor_jou.jpg\"/>\n</div>\n<div>\n<h3 class=\"text-xl font-bold text-primary mb-3\">Optimize &amp; handover</h3>\n<p class=\"text-gray-600 text-sm leading-relaxed\">\n                We test, measure, and refine. We document what\u2019s working and either stay on as an optimization partner\n                or train your internal team to run the system confidently.\n              </p>\n</div>\n</div>\n</div>\n</div>\n</section>",
+            "images": [
+                {
+                    "src": "assets/about_free_intro_call_philanthroforge_free_dignostics.jpg",
+                    "alt": "Icon"
+                },
+                {
+                    "src": "assets/about_free_intro_calldiagnostic_philanthroforge_call.jpg",
+                    "alt": "Icon"
+                },
+                {
+                    "src": "assets/about_build_implement_philanthroforge_how_to_get_more_donation.jpg",
+                    "alt": "Icon"
+                },
+                {
+                    "src": "assets/about_build_implementoptimize_handover_philanthroforge_development_of_donor_jou.jpg",
+                    "alt": "Icon"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Book yourfreeconsultation now",
+            "content": "<section class=\"py-24 bg-white border-t border-gray-200\">\n<div class=\"container-padded grid lg:grid-cols-2 gap-16 items-start\">\n<div>\n<h2 class=\"text-4xl lg:text-5xl font-bold text-neutral-dark mb-6\">\n            Book your <span class=\"text-navy\">free</span><br/>consultation now\n          </h2>\n<p class=\"text-xl text-gray-600 mb-8 max-w-lg\">\n            Get free consultation for digital initiatives, insights on your target audiences and website performance\n            analysis.\n          </p>\n</div>\n<!-- Calendar Embed -->\n<div class=\"bg-white p-2 rounded-lg shadow-lg overflow-hidden border border-gray-200\">\n<iframe frameborder=\"0\" height=\"600\" src=\"https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true\" style=\"border: 0\" width=\"100%\"></iframe>\n</div>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

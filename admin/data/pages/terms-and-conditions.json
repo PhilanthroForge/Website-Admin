@@ -1,0 +1,130 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/terms-and-conditions",
+        "title": "Terms & Conditions - PhilanthroForge",
+        "slug": "terms-and-conditions"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising"
+                },
+                {
+                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy"
+                },
+                {
+                    "src": "assets/index_website_donation_optimization_philanthroforge_donation_page_optimization_.jpg",
+                    "alt": "Web Optimization"
+                },
+                {
+                    "src": "assets/index_donation_form_optimization_philanthroforge_online_donation_forms_donor_ex.jpg",
+                    "alt": "Donation Forms"
+                },
+                {
+                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey_mapping.jpg",
+                    "alt": "Campaign Design"
+                },
+                {
+                    "src": "assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_donor_analytics_d.jpg",
+                    "alt": "Donor Analysis"
+                },
+                {
+                    "src": "assets/index_csr_major_donor_support_philanthroforge_corporate_social_responsibility_n.jpg",
+                    "alt": "CSR & Major Donors"
+                },
+                {
+                    "src": "assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_branding_s.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg...jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "assets/index_turning_supporters_into_fundraisers_unloc...jpg",
+                    "alt": "Supporters to Fundraisers"
+                },
+                {
+                    "src": "assets/index_integrated_ecosystems_create_sustainable_g...jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "1. Introduction",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">1. Introduction</h2>\n<p>These Terms and Conditions (\"Terms\") govern the relationship between PhilanthroForge (\"Agency,\" \"we,\" \"us\")\n          and the entity engaging our services (\"Client,\" \"you\"). By accepting a Proposal, signing a Statement of Work\n          (SOW), or using our services, you agree to these Terms.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "2. Services & Scope",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">2. Services &amp; Scope</h2>\n<p class=\"mb-2\">The specific services to be provided (e.g., Fundraising Audits, Campaign Strategy, System\n          Optimization, Web Development) will be outlined in a separate Statement of Work (SOW) or Proposal.</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Change Orders:</strong> Any requests outside the scope of the signed SOW will require a separate\n            agreement or Change Order and may incur additional fees.</li>\n<li><strong>Non-Exclusivity:</strong> We retain the right to perform similar services for other non-profits or\n            organizations, provided we do not breach our confidentiality obligations to you.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "3. Client Responsibilities",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">3. Client Responsibilities</h2>\n<p class=\"mb-2\">To ensure the success of our \"forging\" process, you agree to:</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Access:</strong> Provide strictly necessary access to your CRM, donation platforms, analytics\n            tools, and website backend as required.</li>\n<li><strong>Materials:</strong> Provide all necessary text, images, and branding assets in a timely manner.\n            You represent that you own the rights to all materials you provide to us.</li>\n<li><strong>Approvals:</strong> Respond to requests for review and approval within 3 business days to avoid\n            project delays.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "4. Fees and Payment",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">4. Fees and Payment</h2>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Invoicing:</strong> We will invoice you according to the schedule in the SOW (e.g., 50% upfront,\n            50% on completion, or monthly retainers).</li>\n<li><strong>Payment Terms:</strong> Invoices are due within 30 days of receipt.</li>\n<li><strong>Late Payments:</strong> Late payments shall incur interest at the rate of 1.5% per month or the\n            maximum allowed by law. We reserve the right to pause work if invoices remain unpaid past 35 days.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "5. Intellectual Property (The \"Forge\" Clause)",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">5. Intellectual Property (The \"Forge\" Clause)</h2>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Client Ownership:</strong> Upon full payment, you will own the final deliverables created\n            specifically for you (e.g., specific campaign copy, custom report designs, specific website code).</li>\n<li><strong>Agency Ownership:</strong> Philanthroforge retains all rights to our pre-existing background\n            technology, methodologies, frameworks, generalized code, and tools (our \"Background IP\") used to create the\n            deliverables. We grant you a non-exclusive, perpetual license to use this Background IP solely as part of\n            the deliverables.</li>\n<li><strong>No White Labeling:</strong> Unless explicitly agreed otherwise, you may not resell or white-label\n            our proprietary strategies or tools.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "6. Confidentiality",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">6. Confidentiality</h2>\n<p class=\"mb-2\">We acknowledge that we may have access to sensitive donor data and internal strategies.</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Obligation:</strong> We agree to keep all Client Confidential Information (including donor lists,\n            financial data, and strategic plans) strictly confidential and use it solely for the purpose of providing\n            Services.</li>\n<li><strong>Exceptions:</strong> Confidential Information does not include information publicly known or\n            independently developed by us.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "7. Disclaimers & Warranties",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">7. Disclaimers &amp; Warranties</h2>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>No Fundraising Guarantee:</strong> While we use evidence-based optimization and best practices,\n            Philanthroforge expressly disclaims any guarantee of specific fundraising results, donation volumes, or ROI.\n            Donor behavior is unpredictable; we promise professional effort, not specific financial outcomes.</li>\n<li><strong>\"As Is\" Service:</strong> Services are provided on a professional basis. We do not warrant that\n            software or digital systems will be entirely error-free or uninterrupted.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "8. Limitation of Liability",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">8. Limitation of Liability</h2>\n<p>To the maximum extent permitted by law, Philanthroforge\u2019s liability for any claim arising out of these Terms\n          shall be limited to the amount of fees actually paid by Client to Agency in the six (6) months preceding the\n          claim. In no event shall we be liable for lost profits, lost donor data (unless due to our gross negligence),\n          or consequential damages.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "9. Termination",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">9. Termination</h2>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>For Convenience:</strong> Either party may terminate an ongoing retainer agreement with days'\n            written notice.</li>\n<li><strong>For Cause:</strong> Either party may terminate immediately if the other party breaches a material\n            term and fails to cure it within days of notice.\u200b</li>\n<li><strong>Effect:</strong> Upon termination, Client shall pay for all work completed up to the termination\n            date.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "10. Governing Law",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">10. Governing Law</h2>\n<p>These Terms shall be governed by the laws of India.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

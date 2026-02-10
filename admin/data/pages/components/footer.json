@@ -1,0 +1,26 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/components/footer",
+        "title": "components/footer",
+        "slug": "components/footer"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                }
+            ]
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

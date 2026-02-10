@@ -1,0 +1,857 @@
+{% extends "base.html" %}
+
+{% block title %}Edit {{ page_id|title }}{% endblock %}
+
+{% block head %}
+<!-- TinyMCE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+        selector: '.wysiwyg-editor',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+            'insertdatetime', 'media', 'table', 'help', 'wordcount'
+        ],
+        toolbar: 'undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat | help',
+        content_style: 'body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px }'
+    });
+</script>
+<!-- SortableJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+{% endblock %}
+
+{% from 'macros/sidebar.html' import render_sidebar with context %}
+
+{% block body %}
+<div class="flex h-screen bg-gray-100 overflow-hidden">
+    <!-- Admin Sidebar -->
+    {{ render_sidebar('pages') }}
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex flex-col h-full min-w-0">
+        <!-- Top Header -->
+        <header class="bg-white shadow-sm z-20 flex-shrink-0">
+            <div class="px-6 py-4 flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800">Edit Page: {{ content.get('title') or page_id|title }}
+                    </h2>
+                    <p class="text-xs text-gray-500 font-mono mt-0.5">ID: {{ page_id }}</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="{{ url_for('pages_list') }}"
+                        class="px-4 py-2 border border-gray-300 rounded text-gray-600 text-sm hover:bg-gray-50 transition-colors">Cancel</a>
+                    <button type="button" onclick="savePage()"
+                        class="px-4 py-2 bg-accent text-primary font-bold rounded text-sm hover:bg-yellow-400 shadow-sm transition-colors">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Editor Area (Split View) -->
+        <div class="flex-1 flex overflow-hidden">
+
+            <!-- Left: Content Editor (Scrollable) -->
+            <div class="flex-1 overflow-y-auto p-8 relative" id="main-editor-scroll">
+                <div class="max-w-5xl mx-auto pb-24 space-y-8">
+
+                    <!-- Global Header Placeholder -->
+                    <div
+                        class="border-2 border-dashed border-gray-200 rounded-xl p-6 text-center bg-gray-50/50 hover:bg-gray-50 hover:border-accent/50 transition-colors group">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Global Header Zone</p>
+                        <div
+                            class="flex flex-col items-center gap-2 opacity-40 group-hover:opacity-100 transition-opacity">
+                            <div class="w-full max-w-2xl h-8 bg-gray-200 rounded skeleton-loader"></div>
+                            <a href="{{ url_for('edit_navbar') }}" target="_blank"
+                                class="text-xs text-accent hover:text-yellow-600 font-bold flex items-center gap-1 mt-2">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                                    </path>
+                                </svg>
+                                Edit Navbar Configuration
+                            </a>
+                        </div>
+                    </div>
+
+                    <form id="pageForm" class="space-y-8 relative">
+
+                        <!-- Main Content Zone Marker -->
+                        <div class="absolute -left-4 top-0 bottom-0 border-l-2 border-accent/20"></div>
+                        <div
+                            class="absolute -left-10 top-1/2 -rotate-90 text-xs font-bold text-gray-300 uppercase tracking-widest pointer-events-none">
+                            Page Content</div>
+
+                        <!-- Page Metadata -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4 border-b pb-2">Page
+                                Metadata</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Page Title</label>
+                                    <input type="text" name="title" value="{{ content.get('title', '') }}"
+                                        class="w-full border-gray-300 rounded-md shadow-sm focus:border-accent focus:ring-accent text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Meta Description</label>
+                                    <input type="text" name="meta_description"
+                                        value="{{ content.get('meta_description', '') }}"
+                                        class="w-full border-gray-300 rounded-md shadow-sm focus:border-accent focus:ring-accent text-sm">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content Blocks Container -->
+                        <div id="sections-container" class="space-y-6">
+                            {% set blocks = content.get('content_blocks', []) %}
+                            {# If empty, maybe check sections dict (legacy) but ideally migrated #}
+                            {% if not blocks and content.get('sections') %}
+                            <!-- Legacy logic if needed, simplifed for now assuming content_blocks -->
+                            {% endif %}
+
+                            {% for block in blocks %}
+                            {% set outer_loop = loop %}
+                            <div class="content-block bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group transition-all"
+                                data-id="block-{{ outer_loop.index0 }}" id="block-{{ outer_loop.index0 }}">
+
+                                <!-- Block Header -->
+                                <div
+                                    class="bg-gray-50 px-6 py-3 border-b border-gray-200 flex justify-between items-center cursor-move handle">
+                                    <div class="flex items-center gap-3">
+                                        <div class="text-gray-400 group-hover:text-gray-600">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M4 8h16M4 16h16"></path>
+                                            </svg>
+                                        </div>
+                                        <h4 class="font-bold text-gray-700 text-sm uppercase tracking-wide">
+                                            {{ block.heading or 'Untitled Section' }}
+                                        </h4>
+                                        <span
+                                            class="bg-gray-200 text-gray-600 text-[10px] px-2 py-0.5 rounded-full uppercase font-bold">{{
+                                            block.type or 'SECTION' }}</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <button type="button"
+                                            class="text-gray-400 hover:text-red-500 p-1 rounded hover:bg-red-50 transition-colors"
+                                            title="Delete Section" onclick="deleteSection(this)">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="content_blocks[{{ outer_loop.index0 }}][type]"
+                                        value="{{ block.type }}">
+                                </div>
+
+                                <!-- Block Body -->
+                                <div class="p-6 space-y-6">
+                                    <!-- Heading & Subheading -->
+                                    <div>
+                                        <input type="text" name="content_blocks[{{ outer_loop.index0 }}][heading]"
+                                            value="{{ block.heading or '' }}"
+                                            class="block-heading-input w-full text-2xl font-bold text-gray-800 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors"
+                                            placeholder="Section Heading"
+                                            oninput="updateSidebarLabel('block-{{ outer_loop.index0 }}', this.value)">
+                                        <label
+                                            class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Heading</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="text" name="content_blocks[{{ outer_loop.index0 }}][subheading]"
+                                            value="{{ block.subheading or '' }}"
+                                            class="w-full text-lg font-semibold text-gray-600 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors"
+                                            placeholder="Subheading">
+                                        <label
+                                            class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Subheading</label>
+                                    </div>
+
+                                    <!-- Intro Text -->
+                                    {% if block.intro is defined %}
+                                    <div>
+                                        <textarea name="content_blocks[{{ outer_loop.index0 }}][intro]" rows="2"
+                                            class="w-full text-base text-gray-600 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors resize-y"
+                                            placeholder="Introductory text...">{{ block.intro }}</textarea>
+                                        <label
+                                            class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Intro
+                                            Text</label>
+                                    </div>
+                                    {% endif %}
+
+                                    <!-- Properties specific to block types could go here (e.g. key/value for stats) -->
+
+                                    <!-- Main Text Content (HTML) -->
+                                    <div class="pt-2">
+                                        <label
+                                            class="block text-xs font-medium text-gray-400 mb-2 uppercase tracking-wide">Content</label>
+                                        <textarea name="content_blocks[{{ outer_loop.index0 }}][content]"
+                                            class="wysiwyg-editor">{{ block.content or block.text or '' }}</textarea>
+                                    </div>
+
+                                    <!-- Images Management -->
+                                    {% if block.images %}
+                                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                        <label
+                                            class="block text-xs font-bold text-gray-500 mb-3 uppercase tracking-wide">Images</label>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            {% for image in block.images %}
+                                            <div
+                                                class="bg-white p-3 rounded border border-gray-200 shadow-sm relative group">
+                                                <div
+                                                    class="aspect-video bg-gray-100 rounded mb-2 overflow-hidden flex items-center justify-center">
+                                                    <img src="/{{ image.src }}" alt="{{ image.alt }}"
+                                                        class="w-full h-full object-cover"
+                                                        id="img_preview_{{ outer_loop.index0 }}_{{ loop.index0 }}"
+                                                        onerror="this.src='https://placehold.co/600x400?text=Missing+Image'">
+                                                </div>
+                                                <div class="space-y-2">
+                                                    <div class="flex gap-2">
+                                                        <input type="text" readonly value="{{ image.src }}"
+                                                            class="flex-1 text-[10px] text-gray-500 bg-gray-50 border border-gray-200 rounded px-2 py-1">
+                                                        <button type="button"
+                                                            onclick="triggerReplace('{{ image.src }}', 'img_preview_{{ outer_loop.index0 }}_{{ loop.index0 }}')"
+                                                            class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded hover:bg-blue-100 font-medium transition-colors">
+                                                            Replace
+                                                        </button>
+                                                    </div>
+                                                    <input type="text"
+                                                        name="content_blocks[{{ outer_loop.index0 }}][images][{{ loop.index0 }}][alt]"
+                                                        value="{{ image.alt }}"
+                                                        class="w-full text-xs border-gray-200 rounded px-2 py-1 placeholder-gray-400"
+                                                        placeholder="Alt Text">
+                                                    <input type="hidden"
+                                                        name="content_blocks[{{ outer_loop.index0 }}][images][{{ loop.index0 }}][src]"
+                                                        value="{{ image.src }}">
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Add Block Area -->
+                        <div class="relative py-8 text-center" id="add-block-area">
+                            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                                <div class="w-full border-t border-gray-200"></div>
+                            </div>
+                            <div class="relative flex justify-center">
+                                <div class="group relative">
+                                    <button type="button" onclick="toggleAddMenu()"
+                                        class="inline-flex items-center gap-2 rounded-full border-2 border-dashed border-gray-300 bg-white px-6 py-2 text-sm font-medium text-gray-600 hover:border-accent hover:text-accent shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
+                                        <svg class="-ml-1 mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        Add Section
+                                    </button>
+
+                                    <!-- Dropdown Menu -->
+                                    <div id="add-menu"
+                                        class="hidden absolute left-1/2 bottom-full mb-2 -translate-x-1/2 w-56 rounded-lg bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none z-10 animate-in fade-in zoom-in duration-200">
+                                        <div class="p-1">
+                                            <button type="button" onclick="addBlock('hero')"
+                                                class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                <span class="bg-indigo-100 text-indigo-600 p-1 rounded"><svg
+                                                        class="w-4 h-4" fill="none" stroke="currentColor"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                                        </path>
+                                                    </svg></span>
+                                                Hero Section
+                                            </button>
+                                            <button type="button" onclick="addBlock('text')"
+                                                class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                <span class="bg-blue-100 text-blue-600 p-1 rounded"><svg class="w-4 h-4"
+                                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                                    </svg></span>
+                                                Text Block
+                                            </button>
+                                            <button type="button" onclick="addBlock('features')"
+                                                class="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                                <span class="bg-green-100 text-green-600 p-1 rounded"><svg
+                                                        class="w-4 h-4" fill="none" stroke="currentColor"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                                                        </path>
+                                                    </svg></span>
+                                                Features Grid
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <!-- Global Footer Placeholder -->
+                    <div
+                        class="w-full clear-both border-2 border-dashed border-gray-200 rounded-xl p-8 text-center bg-gray-900/5 hover:bg-gray-900/10 hover:border-gray-400 transition-colors group mt-12 block">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Global Footer Zone</p>
+                        <div
+                            class="flex flex-col items-center gap-3 opacity-40 group-hover:opacity-100 transition-opacity">
+                            <div class="grid grid-cols-3 gap-4 w-full max-w-lg mb-2">
+                                <div class="h-20 bg-gray-300 rounded skeleton-loader"></div>
+                                <div class="h-20 bg-gray-300 rounded skeleton-loader"></div>
+                                <div class="h-20 bg-gray-300 rounded skeleton-loader"></div>
+                            </div>
+                            <a href="{{ url_for('edit_footer') }}" target="_blank"
+                                class="text-xs text-gray-600 hover:text-gray-900 font-bold flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                                    </path>
+                                </svg>
+                                Edit Footer Configuration
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Structure Sidebar (Sticky) -->
+            <div class="w-80 border-l border-gray-200 bg-white flex flex-col h-full shadow-lg z-10">
+                <div class="px-4 py-3 border-b border-gray-100 bg-gray-50 flex justify-between items-center">
+                    <h3 class="font-bold text-gray-700 text-sm uppercase tracking-wide">Page Structure</h3>
+                    <span class="text-xs text-gray-400 font-mono" id="layer-count">0 Items</span>
+                </div>
+                <!-- Layers List -->
+                <div class="flex-1 overflow-y-auto p-3 space-y-1 custom-scrollbar" id="layers-list">
+                    <!-- JS Injected Layers -->
+                </div>
+                <!-- Mini Legend/Help -->
+                <div class="p-3 bg-gray-50 border-t border-gray-100 text-[10px] text-gray-400 text-center">
+                    Drag items to reorder &bull; Click to scroll
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Include Image Picker Modal -->
+{% include 'admin/components/image_picker_modal.html' %}
+
+<!-- Replaced direct file input with modal logic -->
+<script>
+    // --- Image Picker Modal Logic ---
+    let currentReplacePath = '';
+    let currentPreviewId = '';
+    let currentTab = 'upload';
+
+    function triggerReplace(path, previewId) {
+        currentReplacePath = path;
+        currentPreviewId = previewId;
+
+        // Reset and Open Modal
+        document.getElementById('image-picker-modal').classList.remove('hidden');
+        switchTab('upload'); // Default to upload
+
+        // Clear previous search
+        document.getElementById('unsplash-results').innerHTML = '<div class="col-span-full text-center text-gray-400 py-10">Search for something awesome...</div>';
+        document.getElementById('unsplash-search').value = '';
+    }
+
+    function closeImagePicker() {
+        document.getElementById('image-picker-modal').classList.add('hidden');
+    }
+
+    function switchTab(tab) {
+        currentTab = tab;
+
+        // Update Tabs UI
+        document.getElementById('tab-upload').className = tab === 'upload'
+            ? 'border-accent text-accent whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+
+        document.getElementById('tab-unsplash').className = tab === 'unsplash'
+            ? 'border-accent text-accent whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+
+        // Update Content
+        document.getElementById('content-upload').className = tab === 'upload' ? 'space-y-4' : 'hidden';
+        document.getElementById('content-unsplash').className = tab === 'unsplash' ? 'space-y-4' : 'hidden';
+    }
+
+    // --- Upload Logic ---
+    function handleFileUpload(file) {
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('existing_path', currentReplacePath); // Optional, for overwrite logic if any
+
+        // Show loading state
+        // For simplicity, using alert or spinner in modal would be better
+
+        fetch('{{ url_for("replace_image") }}', { method: 'POST', body: formData })
+            .then(globalResponseHandler)
+            .then(data => {
+                updatePreview('/' + currentReplacePath + '?t=' + new Date().getTime());
+                alert('Image uploaded successfully!');
+                closeImagePicker();
+            })
+            .catch(err => alert('Upload Error: ' + err));
+    }
+
+    // --- Unsplash Logic ---
+    function handleEnter(e) {
+        if (e.key === 'Enter') searchUnsplash();
+    }
+
+    function searchUnsplash() {
+        const query = document.getElementById('unsplash-search').value;
+        if (!query) return;
+
+        const resultsContainer = document.getElementById('unsplash-results');
+        const loading = document.getElementById('unsplash-loading');
+
+        resultsContainer.innerHTML = '';
+        loading.classList.remove('hidden');
+
+        fetch(`/admin/api/unsplash/search?query=${encodeURIComponent(query)}`)
+            .then(res => res.json())
+            .then(data => {
+                loading.classList.add('hidden');
+
+                if (data.error) {
+                    resultsContainer.innerHTML = `<div class="col-span-full text-center text-red-500 py-10">API Error: ${data.error}</div>`;
+                    return;
+                }
+
+                // Show Mock Warning
+                if (data.is_mock) {
+                    const warningData = document.createElement('div');
+                    warningData.className = 'col-span-full bg-yellow-50 text-yellow-800 text-xs p-2 rounded text-center mb-2';
+                    warningData.innerHTML = `⚠️ <b>Demo Mode:</b> ${data.message || 'Using mock data because API key is invalid.'}`;
+                    resultsContainer.appendChild(warningData);
+                }
+
+                if (data.results && data.results.length > 0) {
+                    data.results.forEach(photo => {
+                        const div = document.createElement('div');
+                        div.className = 'relative group aspect-square bg-gray-100 rounded overflow-hidden cursor-pointer hover:ring-2 hover:ring-accent';
+                        div.onclick = () => selectUnsplashPhoto(photo);
+                        div.innerHTML = `
+                            <img src="${photo.thumb}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xs">
+                                Select
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 text-[10px] text-white opacity-0 group-hover:opacity-100 truncate">
+                                by ${photo.photographer}
+                            </div>
+                        `;
+                        resultsContainer.appendChild(div);
+                    });
+                } else {
+                    resultsContainer.innerHTML = '<div class="col-span-full text-center text-gray-500 py-10">No results found.</div>';
+                }
+            })
+            .catch(err => {
+                loading.classList.add('hidden');
+                resultsContainer.innerHTML = `<div class="col-span-full text-center text-red-500 py-10">Error: ${err.message}</div>`;
+            });
+    }
+
+    function selectUnsplashPhoto(photo) {
+        // Trigger download/save to local
+        const loading = document.getElementById('unsplash-loading');
+        loading.classList.remove('hidden');
+
+        fetch('/admin/api/unsplash/download', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                download_location: photo.download_location,
+                id: photo.id
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                loading.classList.add('hidden');
+                if (data.success) {
+                    // Update the image src in the editor
+                    // Note: The backend returns "assets/uploads/filename.jpg".
+                    // But currentReplacePath might be "assets/index_something.jpg".
+                    // We are REPLACING the image on the filesystem OR updating the src in JSON?
+                    // The current logic (replace_image) overwrites the file at existing_path.
+                    // UNLESS Unsplash download returns a NEW path.
+                    // Steps:
+                    // 1. We have a new local file at data.path
+                    // 2. We need to update the JSON content block to point to this NEW path.
+                    // 3. AND we need to update the preview.
+
+                    // CRITICAL: The current 'replace' logic assumes overwriting the file to keep the same name.
+                    // Unsplash gives a new name.
+                    // We must update the hidden input value for 'src' in the form.
+
+                    updatePreview('/' + data.path);
+
+                    // Update the hidden input
+                    // currentPreviewId is "img_preview_X_Y"
+                    // The hidden input is next to it, or structured predictably.
+                    // Let's find it.
+                    const img = document.getElementById(currentPreviewId);
+                    if (img) {
+                        const container = img.closest('.space-y-2'); // Based on HTML structure
+                        if (container) {
+                            const hiddenInput = container.querySelector('input[type="hidden"]');
+                            if (hiddenInput) hiddenInput.value = data.path;
+
+                            const textInput = container.querySelector('input[type="text"][readonly]');
+                            if (textInput) textInput.value = data.path;
+                        }
+                    }
+
+                    alert('Image updated from Unsplash!');
+                    closeImagePicker();
+                } else {
+                    alert('Download failed: ' + data.error);
+                }
+            })
+            .catch(err => {
+                loading.classList.add('hidden');
+                alert('Error selecting photo: ' + err);
+            });
+    }
+
+    function updatePreview(src) {
+        const preview = document.getElementById(currentPreviewId);
+        if (preview) {
+            preview.src = src;
+        }
+    }
+
+    // --- Global Init ---
+    document.addEventListener('DOMContentLoaded', function () {
+        initSidebarLayers();
+        initSortable();
+
+        // Close menu on click outside
+        document.addEventListener('click', function (e) {
+            const menu = document.getElementById('add-menu');
+            const btn = document.querySelector('[onclick="toggleAddMenu()"]');
+            if (menu && !menu.classList.contains('hidden') && !menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    });
+
+    // --- Sidebar Layers ---
+    function initSidebarLayers() {
+        const blocks = document.querySelectorAll('.content-block');
+        const listContainer = document.getElementById('layers-list');
+        const countSpan = document.getElementById('layer-count');
+
+        listContainer.innerHTML = '';
+        countSpan.innerText = `${blocks.length} Items`;
+
+        blocks.forEach((block, index) => {
+            const headingInput = block.querySelector('.block-heading-input');
+            const heading = headingInput ? headingInput.value : `Section ${index + 1}`;
+            const typeSpan = block.querySelector('.rounded-full'); // More specific selector based on HTML
+            const type = typeSpan ? typeSpan.innerText : 'SECTION';
+            const blockId = block.id;
+
+            const layerItem = document.createElement('div');
+            layerItem.className = 'layer-item sortable-item bg-white p-2 rounded border border-gray-100 mb-1 flex justify-between items-center group hover:border-blue-300 hover:bg-blue-50 hover:shadow-sm cursor-move transition-all select-none';
+            layerItem.dataset.id = blockId;
+            layerItem.innerHTML = `
+                <div class="flex items-center gap-2 overflow-hidden flex-1" onclick="scrollToBlock('${blockId}')">
+                    <span class="text-gray-300 cursor-grab">⋮⋮</span>
+                    <div class="flex flex-col min-w-0">
+                        <span class="font-semibold text-xs text-gray-700 truncate w-48" id="layer-label-${blockId}">${heading || 'Untitled Section'}</span>
+                        <span class="text-[9px] text-gray-400 uppercase tracking-tighter">${type}</span>
+                    </div>
+                </div>
+                <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button type="button" onclick="deleteSectionByLayer('${blockId}')" class="p-1 text-gray-400 hover:text-red-500 rounded transition-colors">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    </button>
+                </div>
+            `;
+            listContainer.appendChild(layerItem);
+        });
+
+        // Add Static Global Footer Item
+        const footerItem = document.createElement('div');
+        // Note: Missing 'sortable-item' class prevents dragging
+        footerItem.className = 'layer-item bg-gray-50 p-2 rounded border border-gray-200 border-dashed mb-1 flex justify-between items-center opacity-70 cursor-not-allowed';
+        footerItem.innerHTML = `
+            <div class="flex items-center gap-2 overflow-hidden flex-1">
+                <span class="text-gray-300">🔒</span>
+                <div class="flex flex-col min-w-0">
+                    <span class="font-bold text-xs text-gray-500 uppercase tracking-wide">Global Footer</span>
+                </div>
+            </div>
+        `;
+        listContainer.appendChild(footerItem);
+
+    }
+
+    // --- Drag & Drop ---
+    function initSortable() {
+        const sidebarList = document.getElementById('layers-list');
+        if (sidebarList) {
+            Sortable.create(sidebarList, {
+                animation: 150,
+                ghostClass: 'bg-blue-100',
+                group: 'layers',
+                handle: '.layer-item',
+                draggable: '.sortable-item', // Only allow dragging real items
+                onEnd: function (evt) {
+                    syncEditorOrder(evt.oldIndex, evt.newIndex);
+                }
+            });
+        }
+
+        // Also enable drag within the main editor
+        const mainList = document.getElementById('sections-container');
+        if (mainList) {
+            Sortable.create(mainList, {
+                animation: 150,
+                handle: '.handle',
+                onEnd: function (evt) {
+                    // Just reindex, DOM is already moved by Sortable
+                    reindexBlocks();
+                }
+            });
+        }
+    }
+
+    function syncEditorOrder(oldIndex, newIndex) {
+        if (oldIndex === newIndex) return;
+        const container = document.getElementById('sections-container');
+        const blocks = Array.from(container.children);
+        const blockToMove = blocks[oldIndex];
+        const targetBlock = blocks[newIndex];
+
+        if (newIndex < oldIndex) {
+            container.insertBefore(blockToMove, targetBlock);
+        } else {
+            container.insertBefore(blockToMove, targetBlock.nextSibling);
+        }
+        scrollToBlock(blockToMove.id);
+        reindexBlocks();
+    }
+
+    function reindexBlocks() {
+        const blocks = document.querySelectorAll('.content-block');
+        blocks.forEach((block, index) => {
+            block.id = `block-${index}`;
+            block.dataset.id = `block-${index}`;
+
+            // Update Input Names
+            const inputs = block.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                const name = input.getAttribute('name');
+                if (name) {
+                    // Replace first array index: content_blocks[\d+] -> content_blocks[index]
+                    input.setAttribute('name', name.replace(/content_blocks\[\d+\]/, `content_blocks[${index}]`));
+                }
+            });
+
+            // Update Image Previews (ids and onclicks)
+            const imgs = block.querySelectorAll('img');
+            imgs.forEach((img, imgIdx) => {
+                img.id = `img_preview_${index}_${imgIdx}`;
+                // Also update the onclick of the replace button next to it
+                // This is a bit tricky with DOM structure. 
+                // Better approach: delegate global event or robust selection.
+                // For now, let's find the replace button in the same container.
+                const btn = img.closest('.group').querySelector('button');
+                if (btn) {
+                    const src = img.getAttribute('src').replace(/^\//, ''); // remove leading /
+                    btn.setAttribute('onclick', `triggerReplace('${src}', 'img_preview_${index}_${imgIdx}')`);
+                }
+            });
+
+            // Re-init TinyMCE if needed (Sortable might break iframes)
+            // TinyMCE usually handles moves if done properly, but sometimes needs remove/init.
+            // For now, assume it survives or focus on structure.
+        });
+        initSidebarLayers();
+    }
+
+    // --- Updates & Actions ---
+    function updateSidebarLabel(blockId, value) {
+        const label = document.getElementById(`layer-label-${blockId}`);
+        if (label) label.innerText = value || 'Untitled Section';
+    }
+
+    function scrollToBlock(blockId) {
+        const block = document.getElementById(blockId);
+        const scrollContainer = document.getElementById('main-editor-scroll');
+        if (block && scrollContainer) {
+            // Calculate position relative to container
+            const topPos = block.offsetTop - 20; // 20px padding
+            scrollContainer.scrollTo({ top: topPos, behavior: 'smooth' });
+
+            block.classList.add('ring-2', 'ring-accent');
+            setTimeout(() => block.classList.remove('ring-2', 'ring-accent'), 1500);
+        }
+    }
+
+    function deleteSectionByLayer(blockId) {
+        if (confirm('Delete this section?')) {
+            const block = document.getElementById(blockId);
+            if (block) {
+                block.remove();
+                reindexBlocks();
+            }
+        }
+    }
+
+    function deleteSection(btn) {
+        if (confirm('Delete this section?')) {
+            btn.closest('.content-block').remove();
+            reindexBlocks();
+        }
+    }
+
+    // --- Add Block ---
+    function toggleAddMenu() {
+        document.getElementById('add-menu').classList.toggle('hidden');
+    }
+
+    function addBlock(type) {
+        toggleAddMenu();
+        const container = document.getElementById('sections-container');
+        const index = container.children.length;
+
+        let heading = 'New Section';
+        let intro = '';
+        if (type === 'hero') heading = 'Hero Section';
+        if (type === 'features') heading = 'Features Grid';
+
+        const template = `
+        <div class="content-block bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group transition-all animate-in fade-in slide-in-from-bottom-4" 
+             data-id="block-${index}" id="block-${index}">
+            <div class="bg-gray-50 px-6 py-3 border-b border-gray-200 flex justify-between items-center cursor-move handle">
+                <div class="flex items-center gap-3">
+                    <div class="text-gray-400 group-hover:text-gray-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-700 text-sm uppercase tracking-wide">${heading}</h4>
+                    <span class="bg-gray-200 text-gray-600 text-[10px] px-2 py-0.5 rounded-full uppercase font-bold">${type}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" class="text-gray-400 hover:text-red-500 p-1 rounded hover:bg-red-50 transition-colors" onclick="deleteSection(this)">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    </button>
+                </div>
+                 <input type="hidden" name="content_blocks[${index}][type]" value="${type}">
+            </div>
+            <div class="p-6 space-y-6">
+                 <div>
+                    <input type="text" name="content_blocks[${index}][heading]" value="${heading}" 
+                           class="block-heading-input w-full text-2xl font-bold text-gray-800 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors"
+                           oninput="updateSidebarLabel('block-${index}', this.value)">
+                    <label class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Heading</label>
+                </div>
+                <div>
+                    <input type="text" name="content_blocks[${index}][subheading]" 
+                           class="w-full text-lg font-semibold text-gray-600 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors"
+                           placeholder="Subheading">
+                    <label class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Subheading</label>
+                </div>
+                <div>
+                     <textarea name="content_blocks[${index}][intro]" rows="2"
+                            class="w-full text-base text-gray-600 border-0 border-b-2 border-transparent hover:border-gray-200 focus:border-accent focus:ring-0 px-0 bg-transparent placeholder-gray-300 transition-colors resize-y"
+                            placeholder="Introductory text..."></textarea>
+                    <label class="block text-xs font-medium text-gray-400 mt-1 uppercase tracking-wide">Intro Text</label>
+                </div>
+                <div class="pt-2">
+                    <label class="block text-xs font-medium text-gray-400 mb-2 uppercase tracking-wide">Content</label>
+                    <textarea name="content_blocks[${index}][text]" class="wysiwyg-editor"></textarea>
+                </div>
+            </div>
+        </div>
+        `;
+
+        container.insertAdjacentHTML('beforeend', template);
+        reindexBlocks();
+
+        tinymce.init({
+            selector: `#block-${index} .wysiwyg-editor`,
+            height: 300, menubar: false, plugins: ['advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'help', 'wordcount'], toolbar: 'undo redo | blocks | bold italic forecolor | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat | help', content_style: 'body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px }'
+        });
+
+        setTimeout(() => scrollToBlock(`block-${index}`), 100);
+    }
+
+    // --- Image Replacement Legacy (Removed) ---
+    // The modal logic above replaces this.
+    // Kept empty to avoid diff errors if referenced elsewhere, though mostly self-contained.
+
+
+    function globalResponseHandler(response) {
+        return response.json().then(data => {
+            if (!response.ok || !data.success) {
+                const error = (data && data.error) || response.statusText;
+                throw new Error(error);
+            }
+            return data;
+        });
+    }
+
+    // --- SAVE PAGE ---
+    function savePage() {
+        tinymce.triggerSave();
+        const formData = new FormData(document.getElementById('pageForm'));
+        const rawObj = Object.fromEntries(formData);
+        const payload = unflatten(rawObj);
+
+        // Explicitly fix TinyMCE if unflatten missed it (it shouldn't if names are correct)
+
+        fetch('', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+            .then(globalResponseHandler)
+            .then(data => {
+                alert('Page saved successfully!');
+                // Optional: reload to refresh cache
+            })
+            .catch(err => console.error(err));
+    }
+
+    // Helper to unflatten content_blocks[0][heading] -> object
+    function unflatten(data) {
+        "use strict";
+        if (Object(data) !== data || Array.isArray(data)) return data;
+        var result = {}, cur, prop, idx, last, temp;
+        for (var p in data) {
+            cur = result, prop = "", last = 0;
+            do {
+                idx = p.indexOf("[", last);
+                temp = p.substring(last, idx !== -1 ? idx : undefined);
+                cur = cur[prop] || (cur[prop] = (!isNaN(parseInt(temp)) ? [] : {}));
+                prop = temp;
+                last = idx + 1;
+            } while (idx >= 0);
+            cur[prop] = data[p];
+        }
+        return result[""];
+    }
+
+</script>
+{% endblock %}

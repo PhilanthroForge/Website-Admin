@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/services/donation-form-optimization",
+        "title": "Donation Form Optimization - PhilanthroForge",
+        "slug": "services/donation-form-optimization"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "../assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "../assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising Strategy"
+                },
+                {
+                    "src": "../assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy & Advisory"
+                },
+                {
+                    "src": "../assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
+                    "alt": "Website & Donation Optimization"
+                },
+                {
+                    "src": "../assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
+                    "alt": "Donation Form Optimization"
+                },
+                {
+                    "src": "../assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
+                    "alt": "Fundraising Campaign Design"
+                },
+                {
+                    "src": "../assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
+                    "alt": "Donor Behaviour Analysis"
+                },
+                {
+                    "src": "../assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
+                    "alt": "CSR & Major Donor Support"
+                },
+                {
+                    "src": "../assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "../assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "../assets/index_turning_supporters_into_active_fundraisers.jpg",
+                    "alt": "Turning Supporters Into Fundraisers"
+                },
+                {
+                    "src": "../assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Donation forms refined for completion and clarity.",
+            "content": "<section class=\"py-20 bg-gray-50\">\n<div class=\"container-padded max-w-4xl mx-auto text-center\">\n<h1 class=\"text-4xl md:text-5xl font-bold text-primary mb-6\">Donation forms refined for completion and clarity.\n        </h1>\n<p class=\"text-xl text-gray-600 leading-relaxed\">\n          Thoughtful form design removes friction and strengthens supporter experience.\n        </p>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Small improvements, significant revenue impact.",
+            "content": "<section class=\"py-20\">\n<div class=\"container-padded container mx-auto\">\n<h2 class=\"text-3xl font-bold text-center text-primary mb-16 max-w-3xl mx-auto\">\n          Small improvements, significant revenue impact.\n        </h2>\n<div class=\"grid md:grid-cols-2 gap-12\">\n<!-- Column 1 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Form audit and analysis</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Comprehensive review of current form structure and experience</li>\n<li>\u2022 Assessment of field necessity and copy clarity</li>\n<li>\u2022 Load time and mobile experience evaluation</li>\n<li>\u2022 Current completion rate baseline and opportunity analysis</li>\n</ul>\n</div>\n<!-- Column 2 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Form redesign</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Streamlined field structure removing unnecessary information requests</li>\n<li>\u2022 Logical field ordering that respects natural donor thinking</li>\n<li>\u2022 Simplified, clear labeling and help text</li>\n<li>\u2022 Smart defaults that respect donor preferences</li>\n<li>\u2022 Transparent information about what happens next</li>\n</ul>\n</div>\n<!-- Column 3 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Trust and clarity elements</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Security information presented reassuringly</li>\n<li>\u2022 Privacy considerations clearly addressed</li>\n<li>\u2022 Confirmation messaging that feels warm and appreciative</li>\n<li>\u2022 Post-donation email preview</li>\n</ul>\n</div>\n<!-- Column 4 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M13 7h8m0 0v8m0-8l-8 8-4-4-6 6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Optimization roadmap</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 3\u20135 specific tests (form structure, suggested amounts, frequency options, etc.)</li>\n<li>\u2022 Clear hypotheses and measurement approach</li>\n<li>\u2022 Timeline for testing and learning</li>\n</ul>\n</div>\n</div>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Ready to optimize?",
+            "content": "<section class=\"py-20 bg-primary text-white\">\n<div class=\"container-padded max-w-4xl mx-auto text-center\">\n<h2 class=\"text-3xl font-bold mb-8\">Ready to optimize?</h2>\n<div class=\"bg-white/10 p-8 rounded-lg backdrop-blur-sm mb-12\">\n<p class=\"text-xl font-medium\">\n            Output: Specifications ready for implementation and testing framework.\n          </p>\n</div>\n<a class=\"inline-block bg-accent text-primary font-bold text-xl px-10 py-4 rounded-sm hover:bg-white hover:shadow-lg transition-all transform hover:-translate-y-1\" href=\"../lets-talk.html\">\n          See your fundraising system with fresh perspective\n        </a>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Case Studies{% endblock %}
+
+{% block body %}
+<div class="flex h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    {% from 'macros/sidebar.html' import render_sidebar %}
+    {{ render_sidebar('case_studies') }}
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto">
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-8 py-4 flex justify-between items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800">Case Studies</h2>
+                    <p class="text-gray-600 text-sm mt-1">Manage your case study portfolio</p>
+                </div>
+                <a href="{{ url_for('new_case_study') }}"
+                    class="px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400 flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    Add Case Study
+                </a>
+            </div>
+        </header>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="px-8 py-4 space-y-2">
+            {% for category, message in messages %}
+            <div class="flash-{{ category }} rounded-md p-4 text-sm shadow">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="p-8">
+            {% if case_studies %}
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Title</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Client</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Last Updated</th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for case_study in case_studies %}
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">{{ case_study.title or 'Untitled Case
+                                        Study' }}</div>
+                                    <div class="text-sm text-gray-500">{{ case_study.subtitle or '' }}</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {{ case_study.client or 'N/A' }}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span
+                                    class="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
+                                    {% if case_study.status == 'published' %}bg-green-100 text-green-800{% else %}bg-gray-100 text-gray-800{% endif %}">
+                                    {{ case_study.status or 'draft' }}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                {{ case_study.updated_at[:10] if case_study.updated_at else 'Never' }}
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <a href="{{ url_for('edit_case_study', case_id=case_study.id) }}"
+                                    class="text-blue-600 hover:text-blue-900 mr-3">Edit</a>
+                                <button onclick="deleteCaseStudy('{{ case_study.id }}')"
+                                    class="text-red-600 hover:text-red-900">Delete</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="bg-white rounded-lg shadow p-12 text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">No case studies yet</h3>
+                <p class="text-gray-500 mb-6">Get started by creating your first case study</p>
+                <a href="{{ url_for('new_case_study') }}"
+                    class="inline-flex items-center px-4 py-2 bg-accent text-primary rounded-md hover:bg-yellow-400">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    Create Case Study
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+</div>
+
+<script>
+    async function deleteCaseStudy(caseId) {
+        if (!confirm('Are you sure you want to delete this case study?')) {
+            return;
+        }
+
+        const response = await fetch(`/admin/case-studies/${caseId}/delete`, {
+            method: 'POST'
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            window.location.reload();
+        } else {
+            alert('Error: ' + result.error);
+        }
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/case-studies/turning-supporters-into-fundraisers",
+        "title": "Turning Supporters Into Champions - PhilanthroForge",
+        "slug": "case-studies/turning-supporters-into-fundraisers"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "../assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "../assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising Strategy"
+                },
+                {
+                    "src": "../assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy & Advisory"
+                },
+                {
+                    "src": "../assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
+                    "alt": "Website & Donation Optimization"
+                },
+                {
+                    "src": "../assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
+                    "alt": "Donation Form Optimization"
+                },
+                {
+                    "src": "../assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
+                    "alt": "Fundraising Campaign Design"
+                },
+                {
+                    "src": "../assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
+                    "alt": "Donor Behaviour Analysis"
+                },
+                {
+                    "src": "../assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
+                    "alt": "CSR & Major Donor Support"
+                },
+                {
+                    "src": "../assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "../assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "../assets/index_turning_supporters_into_active_fundraisers.jpg",
+                    "alt": "Turning Supporters Into Fundraisers"
+                },
+                {
+                    "src": "../assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "Section 1",
+            "content": "<section>\n<p class=\"mb-6 text-lg leading-relaxed\">The founding team wanted to \u201creward people for bringing more donors to\n          good causes.\u201d The initial idea was broad. Should they build everything from scratch? Target major nonprofits\n          or small community orgs? Use email, LinkedIn, or consumer social? The referral mechanics were exciting but\n          unproven in real\u2011world nonprofit contexts. The model worked in theory, but it needed a digital system that\n          nonprofits could plug into easily\u2014and proof that it could move real numbers.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Challenges",
+            "content": "<section class=\"bg-gray-50 p-8 rounded-lg border-l-4 border-accent\">\n<h2 class=\"text-2xl font-bold text-primary mb-4\">Challenges</h2>\n<ul class=\"space-y-3 list-disc list-inside text-gray-700\">\n<li>Should the first version serve a narrow segment (like local clubs) or go wider from day one?</li>\n<li>How simple can the referral experience be while still tracking rewards accurately?</li>\n<li>Which social channels and content formats would best mobilize supporters?</li>\n<li>What metrics will prove the model works: new donors, total revenue, or recurring upgrades?</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "What PhilanthroForge Did",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">What PhilanthroForge Did</h2>\n<ul class=\"space-y-4\">\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Clarified Positioning:</strong> Ensured the platform spoke the language of fundraisers, not\n              just tech.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Referral Journeys:</strong> Designed multi\u2011step referral journeys: supporter sign\u2011up, referral\n              sharing, reward earning, and re\u2011engagement.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Recruitment Campaigns:</strong> Built campaigns across email and LinkedIn to recruit early\n              nonprofit partners.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Strategic Integration:</strong> Integrated with a major nonprofit directory, expanding\n              potential reach to over 1.2 million nonprofits.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Multi-Channel Activation:</strong> Built and ran multi\u2011channel campaigns to activate\n              supporters.</span>\n</li>\n<li class=\"flex items-start gap-3\">\n<span class=\"text-accent font-bold mt-1\">\u2713</span>\n<span><strong>Ecosystem Alignment:</strong> Structured a strategic integration on Every.org for massive\n              reach.</span>\n</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Section 4",
+            "content": "<section class=\"grid md:grid-cols-3 gap-6\">\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">1.2M+</div>\n<div class=\"text-sm opacity-80\">Nonprofits Reached</div>\n</div>\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">19x</div>\n<div class=\"text-sm opacity-80\">Donation Increase (Pilot)</div>\n</div>\n<div class=\"bg-navy text-white p-6 rounded-lg text-center\">\n<div class=\"text-4xl font-bold text-accent mb-2\">8x</div>\n<div class=\"text-sm opacity-80\">Donor Count Growth</div>\n</div>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "Takeaways",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">Takeaways</h2>\n<p class=\"text-gray-700 italic border-l-4 border-gray-300 pl-4 py-2\">\n          Reward and matching systems live or die on simplicity and proof. When supporters understand the steps and\n          nonprofits can see hard numbers, \u201creferrals\u201d stop being a buzzword and become a reliable new\u2011donor engine.\n        </p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

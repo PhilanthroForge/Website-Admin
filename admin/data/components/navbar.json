@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "text": "PhilanthroForge",
+    "image": ""
+  },
+  "links": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "About",
+      "url": "/about.html"
+    },
+    {
+      "text": "Services",
+      "url": "/services.html",
+      "hasDropdown": true
+    },
+    {
+      "text": "Case Studies",
+      "url": "/case-studies.html"
+    },
+    {
+      "text": "Contact",
+      "url": "/lets-talk.html"
+    }
+  ],
+  "cta": {
+    "text": "Let's Talk",
+    "url": "/lets-talk.html"
+  },
+  "updated_at": "2026-02-09T10:18:32.912156"
+}

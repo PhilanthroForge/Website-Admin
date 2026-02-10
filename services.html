@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - PhilanthroForge</title>
+<link href="assets/Folder/favicon%20philanthro.png" rel="icon" type="image/png"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#f4d03f',
+            'pale-yellow': '#ffeeb0',
+            'dark-gold': '#fcd670',
+            'neutral-dark': '#2c3e50',
+            'navy': '#2c3e50',
+            'beige': '#f9f9f9',
+            'yellow': '#f4d03f',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Open Sans', 'sans-serif'],
+            'montserrat': ['Montserrat', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Open+Sans:wght@400;700&amp;family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+            .container-padded {
+                @apply container mx-auto px-6;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Rotating Graphic Styles */
+        .sir-circle-wrapper { position: relative; width: 100%; height: 100%; }
+        .sir-rotating-text { position: absolute; inset: 0; animation: sir-rotate 18s linear infinite; }
+        .sir-rotating-text svg { width: 100%; height: 100%; }
+        .sir-rotating-text text { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .theme-dark .sir-rotating-text text { fill: #ffffff; }
+        .theme-light .sir-rotating-text text { fill: #000000; }
+        .sir-logo-center { position: absolute; top: 50%; left: 50%; width: 52%; height: 52%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; }
+        .sir-logo-svg { width: 100%; height: 100%; display: block; animation: sir-rotate-logo 36s linear infinite; }
+        @keyframes sir-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes sir-rotate-logo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+<link href="css/nordic-theme.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+<!-- Navigation Component -->
+<div id="navbar-placeholder"></div><div id="navbar-placeholder"></div>
+<section class="py-24 bg-beige">
+<div class="container-padded">
+<div class="text-center mb-16">
+<h4 class="text-sm font-bold tracking-widest text-navy uppercase mb-2">Core Philosophy</h4>
+<h2 class="text-3xl md:text-4xl font-bold text-neutral-dark">The foundation of what we do</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Principle 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 mb-6 overflow-hidden rounded-md bg-gray-50">
+<img alt="Listen Deeply" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/services/donor-analysis-graphic.jpg"/>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">Listen deeply to donors (and data)</h3>
+<p class="text-gray-600">Great systems start with empathy. We use data to understand what your donors truly
+              value.</p>
+</div>
+<!-- Principle 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 mb-6 overflow-hidden rounded-md bg-gray-50">
+<img alt="Design Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/services/systems-design.jpg"/>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">Design systems, not just campaigns</h3>
+<p class="text-gray-600">Campaigns end. Systems grow. We build infrastructure that keeps delivering results.
+            </p>
+</div>
+<!-- Principle 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-navy group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 mb-6 overflow-hidden rounded-md bg-gray-50">
+<!-- Using generic test/measure image or similar if specific one absent, fell back to optimization image -->
+<img alt="Test Measure Iterate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="assets/service-website-optimization_testing_frameworkdesign_35_prioritized_t_img.jpg"/>
+</div>
+<h3 class="text-xl font-bold text-navy mb-4">Test, measure, iterate</h3>
+<p class="text-gray-600">We don't guess. We test. Every decision is backed by real-world performance data.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="container-padded">
+<h2 class="text-3xl md:text-4xl font-bold text-center text-navy mb-16">Services Offered</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 1. Digital Fundraising Strategy -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/digital-fundraising-strategy.html">
+<div class="h-48 overflow-hidden">
+<img alt="Digital Fundraising Strategy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">Digital Fundraising Strategy</h3>
+<p class="text-gray-600 mb-4">We audit your digital fundraising engine—website, donation UX,
+                  forms, email, campaigns—to see where attention, trust, and money are leaking.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 2. Consultancy & Advisory -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/consultancy-advisory.html">
+<div class="h-48 overflow-hidden">
+<img alt="Fundraising Consultancy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/home/service-consultancy.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">Fundraising Consultancy &amp; Advisory</h3>
+<p class="text-gray-600 mb-4">Strategic guidance to help your team navigate complex fundraising
+                  challenges and tech investments.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 3. Donation Form Optimization -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/donation-form-optimization.html">
+<div class="h-48 overflow-hidden">
+<img alt="Donation Form Optimization" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/index_website_donation_ux_optimizationwe_audit_philanthroforge_nonprofit_fundraising_co.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-primary mb-3">Donation Form Optimization</h3>
+<p class="text-gray-600 mb-4">We optimize your donation experience, forms, messaging, and donor
+                  journeys so each interaction feels intentional.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 4. Website & Donation UX Optimization -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/website-donation-optimization.html">
+<div class="h-48 overflow-hidden">
+<img alt="UX Optimization" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/services_website_donation_ux_optimization_philanthroforge_nonprofit_ux_audit_digit.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-navy mb-3">Website &amp; Donation UX Optimization</h3>
+<p class="text-gray-600 text-sm mb-4">Removal of friction points and optimization of the digital
+                  fundraising engine.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 5. Fundraising Campaign & Journey Design -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/fundraising-campaign-journey-design.html">
+<div class="h-48 overflow-hidden">
+<img alt="Campaign Design" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/services_fundraising_campaign_journey_design_philanthroforge_increase_recurring_donat.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-navy mb-3">Fundraising Campaign &amp; Journey Design</h3>
+<p class="text-gray-600 text-sm mb-4">Strategic campaign planning and automated donor journeys.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 6. Donor Behaviour Analysis & Revenue Growth -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/donor-behaviour-analysis-revenue-growth.html">
+<div class="h-48 overflow-hidden">
+<img alt="Donor Analysis" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/services_digital_fundraising_strategy_philanthroforge_nonprofit_ux_audit.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-navy mb-3">Donor Behaviour Analysis &amp; Revenue Growth</h3>
+<p class="text-gray-600 text-sm mb-4">Data-driven insights to uncover hidden revenue opportunities.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 7. CSR & Major Donor Support -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/csr-major-donor-support.html">
+<div class="h-48 overflow-hidden">
+<img alt="CSR Support" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/services_csr_major_donor_support_philanthroforge_increase_recurring_donat.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-navy mb-3">CSR &amp; Major Donor Support</h3>
+<p class="text-gray-600 text-sm mb-4">Equipping your team with the materials and strategy to win big
+                  gifts.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+<!-- 8. Brand Identity -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+<a class="block h-full" href="services/brand-identity-impact-communication.html">
+<div class="h-48 overflow-hidden">
+<img alt="Brand Identity" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="assets/services/brand-identity/visual-system.jpg"/>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-navy mb-3">Brand, Identity &amp; Impact Communication</h3>
+<p class="text-gray-600 text-sm mb-4">Visual identity and storytelling that resonates with modern
+                  donors.</p>
+<span class="text-primary font-bold hover:text-accent flex items-center gap-1">Learn More →</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-neutral-light border-t border-gray-200">
+<div class="container-padded grid lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="text-4xl lg:text-5xl font-bold text-neutral-dark mb-6">
+            Book your <span class="text-navy">free</span><br/>consultation now
+          </h2>
+<p class="text-xl text-gray-600 mb-8 max-w-lg">
+            Get free consultation for digital initiatives, insights on your target audiences and website performance
+            analysis.
+          </p>
+<a class="inline-block bg-yellow text-neutral-dark font-bold text-xl px-10 py-4 rounded-sm hover:bg-white hover:shadow-lg transition-all transform hover:-translate-y-1" href="lets-talk.html">
+            Book Now
+          </a>
+</div>
+<!-- Calendar Embed -->
+<div class="bg-white p-2 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+<iframe frameborder="0" height="600" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true" style="border: 0" width="100%"></iframe>
+</div>
+</div>
+</section>
+<div id="footer-placeholder"></div>
+
+<main class="flex-grow">
+<!-- START: MAIN -->
+
+
+
+<!-- END: MAIN -->
+</main>
+<!-- START: FOOTER -->
+<!-- Footer Component -->
+<div id="footer-placeholder"></div>
+<!-- END: FOOTER -->
+<script>
+    document.querySelector('button.md\\:hidden').addEventListener('click', function () {
+      const nav = document.querySelector('nav');
+      const menu = document.createElement('div');
+      menu.className = 'absolute top-full left-0 w-full bg-primary text-white p-6 shadow-xl flex flex-col space-y-4 md:hidden z-50';
+      menu.innerHTML = document.querySelector('.hidden.md\\:flex').innerHTML;
+      menu.querySelectorAll('.group').forEach(el => {
+        el.classList.remove('group', 'relative');
+        el.querySelector('.absolute').classList.remove('absolute', 'hidden', 'bg-white', 'text-gray-800', 'shadow-xl');
+        el.querySelector('.absolute').classList.add('pl-4', 'mt-2', 'border-l', 'border-gray-500');
+      });
+      if (document.getElementById('mobile-menu')) {
+        document.getElementById('mobile-menu').remove();
+      } else {
+        menu.id = 'mobile-menu';
+        nav.appendChild(menu);
+      }
+    });
+  </script>
+<script src="js/components.js"></script>
+</body>
+</html>

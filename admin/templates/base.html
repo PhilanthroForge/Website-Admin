@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin Panel{% endblock %} - PhilanthroForge</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C3E50',
+                        accent: '#F4D03F',
+                        'nordic-gray': '#F8F9FA',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom admin styles */
+        .admin-sidebar {
+            background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%);
+        }
+
+        .flash-success {
+            background-color: #10B981;
+            color: white;
+        }
+
+        .flash-error {
+            background-color: #EF4444;
+            color: white;
+        }
+
+        .flash-info {
+            background-color: #3B82F6;
+            color: white;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .admin-sidebar {
+                position: fixed;
+                left: -100%;
+                transition: left 0.3s ease;
+                z-index: 50;
+            }
+
+            .admin-sidebar.mobile-open {
+                left: 0;
+            }
+
+            /* Make tables scrollable on mobile */
+            .table-container {
+                overflow-x: auto;
+            }
+
+            /* Stack form fields on mobile */
+            .form-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* Larger touch targets for mobile */
+            button,
+            a.btn {
+                min-height: 44px;
+                padding: 12px 16px;
+            }
+
+            /* Adjust text sizes */
+            h1 {
+                font-size: 1.5rem !important;
+            }
+
+            h2 {
+                font-size: 1.25rem !important;
+            }
+        }
+    </style>
+
+    {% block head %}{% endblock %}
+</head>
+
+<body class="bg-gray-50">
+    {% block body %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+@layer components {
+    .btn-gold {
+        @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+    }
+
+    .card-service {
+        @apply bg-white shadow-lg p-6 rounded-md h-full flex flex-col;
+    }
+}
+
+.bg-pale-yellow {
+    background-color: #ffeeb0;
+}
+
+.bg-dark-gold {
+    background-color: #fcd670;
+}

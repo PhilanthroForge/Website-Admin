@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Let's Talk - PhilanthroForge</title>
+<link href="assets/Folder/favicon%20philanthro.png" rel="icon" type="image/png"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2c3e50',
+            accent: '#f4d03f',
+            'pale-yellow': '#ffeeb0',
+            'dark-gold': '#fcd670',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Open Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Rotating Graphic Styles */
+        .sir-circle-wrapper { position: relative; width: 100%; height: 100%; }
+        .sir-rotating-text { position: absolute; inset: 0; animation: sir-rotate 18s linear infinite; }
+        .sir-rotating-text svg { width: 100%; height: 100%; }
+        .sir-rotating-text text { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .theme-dark .sir-rotating-text text { fill: #ffffff; }
+        .theme-light .sir-rotating-text text { fill: #000000; }
+        .sir-logo-center { position: absolute; top: 50%; left: 50%; width: 52%; height: 52%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; }
+        .sir-logo-svg { width: 100%; height: 100%; display: block; animation: sir-rotate-logo 36s linear infinite; }
+        @keyframes sir-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes sir-rotate-logo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+<link href="css/nordic-theme.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+<!-- Navigation (Mega Menu) -->
+<!-- Navigation Component -->
+<div id="navbar-placeholder"></div><div id="navbar-placeholder"></div>
+<main class="flex-grow container mx-auto px-6 py-20">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Let's Talk</h1>
+<p class="text-xl text-gray-600">Schedule a free consultation to discuss your fundraising strategy.</p>
+</div>
+<!-- Google Calendar Embed -->
+<div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe frameborder="0" height="600" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true" style="border: 0" width="100%"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+</div>
+</main>
+<div id="footer-placeholder"></div>
+
+
+
+
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-6 py-20">
+<!-- START: MAIN -->
+<main class="flex-grow container mx-auto px-6 py-20">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">Let's Talk</h1>
+<p class="text-xl text-gray-600">Schedule a free consultation to discuss your fundraising strategy.</p>
+</div>
+<!-- Google Calendar Embed -->
+<div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200">
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe frameborder="0" height="600" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true" style="border: 0" width="100%"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+</div>
+</main>
+<!-- END: MAIN -->
+</main>
+<!-- Footer -->
+<!-- START: FOOTER -->
+<!-- Footer Component -->
+<div id="footer-placeholder"></div>
+<!-- END: FOOTER -->
+<!-- Mobile Menu Script -->
+<script src="js/components.js"></script>
+</body>
+</html>

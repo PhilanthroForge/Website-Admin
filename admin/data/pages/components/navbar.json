@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/components/navbar",
+        "title": "components/navbar",
+        "slug": "components/navbar"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "assets/index_digital_fundraising_strategywe_audit_you_philanthroforge_nonprofit_digital_fundra.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_professional_nonprofit_f.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/services_listen_deeply_to_donors_and_data_img.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/index_website_donation_ux_optimization_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/service-donation-form_form_redesign_img.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/index_csr_major_donor_support_philanthroforge_nonprofit_fundraising_ad.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/service-brand-identity_visual_identity_system_img.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/case-turning-supporters_content_img.jpg",
+                    "alt": ""
+                },
+                {
+                    "src": "assets/case-integrated-ecosystems_content_img.jpg",
+                    "alt": ""
+                }
+            ]
+        }
+    ]
+}

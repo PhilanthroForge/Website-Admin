@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/privacy-policy",
+        "title": "Privacy Policy - PhilanthroForge",
+        "slug": "privacy-policy"
+    },
+    "content_blocks": [
+        {
+            "type": "HEADER",
+            "heading": "Page Header / Navigation",
+            "content": "<div id=\"navbar-placeholder\"></div>",
+            "images": [
+                {
+                    "src": "assets/Folder/Philanthro%20logo.png",
+                    "alt": "PhilanthroForge Logo"
+                },
+                {
+                    "src": "assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
+                    "alt": "Digital Fundraising"
+                },
+                {
+                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
+                    "alt": "Consultancy"
+                },
+                {
+                    "src": "assets/index_website_donation_optimization_philanthroforge_donation_page_optimization_.jpg",
+                    "alt": "Web Optimization"
+                },
+                {
+                    "src": "assets/index_donation_form_optimization_philanthroforge_online_donation_forms_donor_ex.jpg",
+                    "alt": "Donation Forms"
+                },
+                {
+                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey_mapping.jpg",
+                    "alt": "Campaign Design"
+                },
+                {
+                    "src": "assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_donor_analytics_d.jpg",
+                    "alt": "Donor Analysis"
+                },
+                {
+                    "src": "assets/index_csr_major_donor_support_philanthroforge_corporate_social_responsibility_n.jpg",
+                    "alt": "CSR & Major Donors"
+                },
+                {
+                    "src": "assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_branding_s.jpg",
+                    "alt": "Brand Identity"
+                },
+                {
+                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg...jpg",
+                    "alt": "Rewarding Generosity"
+                },
+                {
+                    "src": "assets/index_turning_supporters_into_fundraisers_unloc...jpg",
+                    "alt": "Supporters to Fundraisers"
+                },
+                {
+                    "src": "assets/index_integrated_ecosystems_create_sustainable_g...jpg",
+                    "alt": "Integrated Ecosystems"
+                }
+            ]
+        },
+        {
+            "type": "SECTION",
+            "heading": "1. Introduction",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">1. Introduction</h2>\n<p>PhilanthroForge (\"we,\" \"our,\" \"us\") respects your privacy. This Privacy Policy explains how we collect, use,\n          and protect information when you visit our website or engage us as an agency.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "2. Information We Collect",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">2. Information We Collect</h2>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Personal Information:</strong> Name, email address, phone number, and organization name when you\n            fill out forms, request an audit, or sign up for newsletters.</li>\n<li><strong>Technical Data:</strong> IP address, browser type, and usage data collected via cookies to help us\n            optimize our own digital fundraising engine.</li>\n<li><strong>Client Data:</strong> In the course of our services, we may process data regarding your donors. We\n            treat this strictly as a Data Processor acting on your instructions (see Section 5).</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "3. How We Use Your Information",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">3. How We Use Your Information</h2>\n<p class=\"mb-2\">We use your data to:</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li>Provide our services and deliver requested audits.</li>\n<li>Process payments and invoicing.</li>\n<li>Send you newsletters, industry insights, or service updates (you may opt out at any time).</li>\n<li>Improve our website and service offerings.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "4. Sharing of Information",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">4. Sharing of Information</h2>\n<p class=\"mb-2\">We do not sell your personal data. We may share data with:</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Service Providers:</strong> Third-party tools we use to run our agency (e.g., CRM, accounting\n            software, email providers), subject to confidentiality agreements.</li>\n<li><strong>Legal Compliance:</strong> If required by law or to protect our rights.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "5. Client Donor Data (Important for Your Niche)",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">5. Client Donor Data (Important for Your Niche)</h2>\n<p class=\"mb-2\">If you hire us to audit or optimize your systems, we may have access to your donor data.</p>\n<ul class=\"list-disc list-inside space-y-2\">\n<li><strong>Confidentiality:</strong> We treat all donor data as highly confidential.</li>\n<li><strong>Usage:</strong> We access this data only for the purpose of analysis, migration, or strategy as\n            defined in our contract. We do not harvest, sell, or contact your donors for our own purposes.</li>\n</ul>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "6. Cookies and Tracking",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">6. Cookies and Tracking</h2>\n<p>We use cookies to analyze website traffic. You can control cookie preferences through your browser settings.\n        </p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "7. Data Security",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">7. Data Security</h2>\n<p>We implement industry-standard security measures (encryption, access controls) to protect data. However, no\n          digital transmission is 100% secure, and we cannot guarantee absolute security.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "8. Your Rights",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">8. Your Rights</h2>\n<p>Depending on your location, you may have rights to access, correct, or delete your personal data. Contact us\n          to exercise these rights.</p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "SECTION",
+            "heading": "9. Contact Us",
+            "content": "<section>\n<h2 class=\"text-2xl font-bold text-primary mb-4\">9. Contact Us</h2>\n<p>If you have questions about these terms or our privacy practices, please contact us at: <a class=\"text-accent underline\" href=\"mailto:hello@philanthroforge.com\">hello@philanthroforge.com</a></p>\n</section>",
+            "images": []
+        },
+        {
+            "type": "FOOTER",
+            "heading": "Page Footer",
+            "content": "<div id=\"footer-placeholder\"></div>",
+            "images": []
+        }
+    ]
+}

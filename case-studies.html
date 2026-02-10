@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies - PhilanthroForge</title>
+<link href="assets/Folder/favicon%20philanthro.png" rel="icon" type="image/png"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50',
+                        accent: '#f4d03f',
+                        'pale-yellow': '#ffeeb0',
+                        'dark-gold': '#fcd670',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Open+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer components {
+            .btn-gold {
+                @apply bg-accent text-primary font-bold uppercase rounded-md px-6 py-3 hover:opacity-90 transition-opacity;
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Rotating Graphic Styles */
+        .sir-circle-wrapper { position: relative; width: 100%; height: 100%; }
+        .sir-rotating-text { position: absolute; inset: 0; animation: sir-rotate 18s linear infinite; }
+        .sir-rotating-text svg { width: 100%; height: 100%; }
+        .sir-rotating-text text { font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .theme-dark .sir-rotating-text text { fill: #ffffff; }
+        .theme-light .sir-rotating-text text { fill: #000000; }
+        .sir-logo-center { position: absolute; top: 50%; left: 50%; width: 52%; height: 52%; transform: translate(-50%, -50%); display: flex; justify-content: center; align-items: center; }
+        .sir-logo-svg { width: 100%; height: 100%; display: block; animation: sir-rotate-logo 36s linear infinite; }
+        @keyframes sir-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes sir-rotate-logo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+<link href="css/nordic-theme.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-gray-800 antialiased flex flex-col min-h-screen">
+<!-- Navigation Component -->
+<div id="navbar-placeholder"></div><div id="navbar-placeholder"></div>
+<main class="flex-grow container mx-auto px-6 py-20 text-center">
+<h1 class="text-4xl md:text-6xl font-bold mb-6 text-primary">Coming Soon</h1>
+<p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            We are currently compiling our impact stories. Check back soon to see how we forge better fundraising
+            systems.
+        </p>
+<a class="btn-gold inline-block" href="index.html">Return Home</a>
+</main>
+<div id="footer-placeholder"></div>
+
+<main class="flex-grow container mx-auto px-6 py-20 text-center">
+<!-- START: MAIN -->
+<main class="flex-grow container mx-auto px-6 py-20 text-center">
+<h1 class="text-4xl md:text-6xl font-bold mb-6 text-primary">Coming Soon</h1>
+<p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            We are currently compiling our impact stories. Check back soon to see how we forge better fundraising
+            systems.
+        </p>
+<a class="btn-gold inline-block" href="index.html">Return Home</a>
+</main>
+<!-- END: MAIN -->
+</main>
+<!-- START: FOOTER -->
+<!-- Footer Component -->
+<div id="footer-placeholder"></div>
+<!-- END: FOOTER -->
+<script>
+        document.querySelector('button.md\\:hidden').addEventListener('click', function () {
+            const nav = document.querySelector('nav');
+            const menu = document.createElement('div');
+            menu.className = 'absolute top-full left-0 w-full bg-primary text-white p-6 shadow-xl flex flex-col space-y-4 md:hidden z-50';
+            menu.innerHTML = document.querySelector('.hidden.md\\:flex').innerHTML;
+            menu.querySelectorAll('.group').forEach(el => {
+                el.classList.remove('group', 'relative');
+                el.querySelector('.absolute').classList.remove('absolute', 'hidden', 'bg-white', 'text-gray-800', 'shadow-xl');
+                el.querySelector('.absolute').classList.add('pl-4', 'mt-2', 'border-l', 'border-gray-500');
+            });
+            if (document.getElementById('mobile-menu')) {
+                document.getElementById('mobile-menu').remove();
+            } else {
+                menu.id = 'mobile-menu';
+                nav.appendChild(menu);
+            }
+        });
+    </script>
+<script src="js/components.js"></script>
+</body>
+</html>
