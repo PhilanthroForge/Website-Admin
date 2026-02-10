@@ -1,64 +1,15 @@
 {
     "metadata": {
-        "url": "https://www.philanthroforge.com/privacy-policy",
+        "url": "https://www.philanthroforge.com/privacy-policy.html",
         "title": "Privacy Policy - PhilanthroForge",
         "slug": "privacy-policy"
     },
     "content_blocks": [
         {
             "type": "HEADER",
-            "heading": "Page Header / Navigation",
+            "heading": "Navigation",
             "content": "<div id=\"navbar-placeholder\"></div>",
-            "images": [
-                {
-                    "src": "assets/Folder/Philanthro%20logo.png",
-                    "alt": "PhilanthroForge Logo"
-                },
-                {
-                    "src": "assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
-                    "alt": "Digital Fundraising"
-                },
-                {
-                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
-                    "alt": "Consultancy"
-                },
-                {
-                    "src": "assets/index_website_donation_optimization_philanthroforge_donation_page_optimization_.jpg",
-                    "alt": "Web Optimization"
-                },
-                {
-                    "src": "assets/index_donation_form_optimization_philanthroforge_online_donation_forms_donor_ex.jpg",
-                    "alt": "Donation Forms"
-                },
-                {
-                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey_mapping.jpg",
-                    "alt": "Campaign Design"
-                },
-                {
-                    "src": "assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_donor_analytics_d.jpg",
-                    "alt": "Donor Analysis"
-                },
-                {
-                    "src": "assets/index_csr_major_donor_support_philanthroforge_corporate_social_responsibility_n.jpg",
-                    "alt": "CSR & Major Donors"
-                },
-                {
-                    "src": "assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_branding_s.jpg",
-                    "alt": "Brand Identity"
-                },
-                {
-                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg...jpg",
-                    "alt": "Rewarding Generosity"
-                },
-                {
-                    "src": "assets/index_turning_supporters_into_fundraisers_unloc...jpg",
-                    "alt": "Supporters to Fundraisers"
-                },
-                {
-                    "src": "assets/index_integrated_ecosystems_create_sustainable_g...jpg",
-                    "alt": "Integrated Ecosystems"
-                }
-            ]
+            "images": []
         },
         {
             "type": "SECTION",
@@ -116,7 +67,7 @@
         },
         {
             "type": "FOOTER",
-            "heading": "Page Footer",
+            "heading": "Footer",
             "content": "<div id=\"footer-placeholder\"></div>",
             "images": []
         }

@@ -1,38 +1,11 @@
 {
-  "service_id": "consultancy-advisory",
-  "title": "PhilanthroForge - Consultancy & Advisory",
-  "subtitle": "Strategic guidance from experienced fundraising partners.",
-  "description": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n\n\nTrusted advisors who understand your mission and help your team make stronger decisions.\n\n\n\nRegular engagement (monthly or quarterly) with your leadership and fundraising teamsDeep-dive discussions on campaigns, initiatives, and strategic questionsFramework testing: Is this decision aligned with our data and strategy?Collaborative problem-solving on implementation challenges\n\nRegular engagement (monthly or quarterly) with your leadership and fundraising teams\n\nDeep-dive discussions on campaigns, initiatives, and strategic questions\n\nFramework testing: Is this decision aligned with our data and strategy?\n\nCollaborative problem-solving on implementation challenges\n\n\n\nBuild vs. buy analysis for technology decisionsGo-to-market strategy for new initiativesInterpretation of campaign and experiment resultsResource allocation and priority-setting guidance\n\nBuild vs. buy analysis for technology decisions\n\nGo-to-market strategy for new initiatives\n\nInterpretation of campaign and experiment results\n\nResource allocation and priority-setting guidance\n\n\n\nHelp your team interpret data and draw strategic insightsFramework training on measurement, experimentation, and iterationDocumentation of decisions and learnings for organizational memoryBest practices and playbooks for your specific model\n\nHelp your team interpret data and draw strategic insights\n\nFramework training on measurement, experimentation, and iteration\n\nDocumentation of decisions and learnings for organizational memory\n\nBest practices and playbooks for your specific model\n\n\n\nWhere appropriate, introductions to aligned partners, vendors, and collaboratorsAccess to our evolving knowledge base and case learnings\n\nWhere appropriate, introductions to aligned partners, vendors, and collaborators\n\nAccess to our evolving knowledge base and case learnings\n\n\n\nRequest an advisory consultation\n\n\n\nGet free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nBook Now\n\n\n\nBook Now",
-  "features": [
-    {
-      "title": "Strategic guidance compounds good execution into great results.",
-      "description": ""
-    },
-    {
-      "title": "You've developed a solid fundraising strategy and want expert perspective as you execute.",
-      "description": ""
-    },
-    {
-      "title": "Key decisions (tech investments, campaign direction, resource allocation) benefit from outside validation and insight.",
-      "description": ""
-    },
-    {
-      "title": "Your talented team would benefit from exposure to best practices and tested frameworks.",
-      "description": ""
-    },
-    {
-      "title": "You want to build organizational capability around measurement, iteration, and data-informed decision-making.",
-      "description": ""
-    },
-    {
-      "title": "We advise, mentor, and help your team make better decisions together.",
-      "description": ""
-    }
-  ],
-  "icon": "",
-  "image": "",
-  "status": "published",
-  "order": 0,
-  "created_at": "2026-02-09T10:32:10.643663",
-  "updated_at": "2026-02-09T10:32:10.643669"
+    "id": "consultancy-advisory",
+    "title": "Consultancy & Advisory",
+    "subtitle": "Strategic guidance from experienced fundraising\n     partners.",
+    "description": "Trusted advisors who understand your mission and help your team make stronger decisions.",
+    "image": "",
+    "url": "services/consultancy-advisory.html",
+    "status": "published",
+    "order": 0,
+    "features": []
 }

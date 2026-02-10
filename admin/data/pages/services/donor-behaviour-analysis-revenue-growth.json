@@ -1,74 +1,25 @@
 {
     "metadata": {
-        "url": "https://www.philanthroforge.com/services/donor-behaviour-analysis-revenue-growth",
+        "url": "https://www.philanthroforge.com/services/donor-behaviour-analysis-revenue-growth.html",
         "title": "Donor Behaviour Analysis - PhilanthroForge",
         "slug": "services/donor-behaviour-analysis-revenue-growth"
     },
     "content_blocks": [
         {
             "type": "HEADER",
-            "heading": "Page Header / Navigation",
+            "heading": "Navigation",
             "content": "<div id=\"navbar-placeholder\"></div>",
-            "images": [
-                {
-                    "src": "../assets/Folder/Philanthro%20logo.png",
-                    "alt": "PhilanthroForge Logo"
-                },
-                {
-                    "src": "../assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
-                    "alt": "Digital Fundraising Strategy"
-                },
-                {
-                    "src": "../assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
-                    "alt": "Consultancy & Advisory"
-                },
-                {
-                    "src": "../assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
-                    "alt": "Website & Donation Optimization"
-                },
-                {
-                    "src": "../assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
-                    "alt": "Donation Form Optimization"
-                },
-                {
-                    "src": "../assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
-                    "alt": "Fundraising Campaign Design"
-                },
-                {
-                    "src": "../assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
-                    "alt": "Donor Behaviour Analysis"
-                },
-                {
-                    "src": "../assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
-                    "alt": "CSR & Major Donor Support"
-                },
-                {
-                    "src": "../assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
-                    "alt": "Brand Identity"
-                },
-                {
-                    "src": "../assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
-                    "alt": "Rewarding Generosity"
-                },
-                {
-                    "src": "../assets/index_turning_supporters_into_active_fundraisers.jpg",
-                    "alt": "Turning Supporters Into Fundraisers"
-                },
-                {
-                    "src": "../assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
-                    "alt": "Integrated Ecosystems"
-                }
-            ]
+            "images": []
         },
         {
             "type": "SECTION",
-            "heading": "Understand supporter behaviour. Grow revenue\n     ",
+            "heading": "Section 1",
             "content": "<section class=\"py-20 bg-gray-50\">\n<div class=\"container-padded max-w-4xl mx-auto text-center\">\n<h1 class=\"text-4xl md:text-5xl font-bold text-primary mb-6\">Understand supporter behaviour. Grow revenue\n          strategically.</h1>\n<p class=\"text-xl text-gray-600 leading-relaxed\">\n          Understand your complete fundraising system, identify the highest-leverage opportunities, and build a roadmap\n          for predictable growth.\n        </p>\n</div>\n</section>",
             "images": []
         },
         {
             "type": "SECTION",
-            "heading": "Turning data patterns into revenue growth.",
+            "heading": "Supporter behaviour analysis",
             "content": "<section class=\"py-20\">\n<div class=\"container-padded container mx-auto\">\n<h2 class=\"text-3xl font-bold text-center text-primary mb-16 max-w-3xl mx-auto\">\n          Turning data patterns into revenue growth.\n        </h2>\n<div class=\"grid md:grid-cols-2 gap-12\">\n<!-- Column 1 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Supporter behaviour analysis</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Acquisition patterns: where do your best supporters come from?</li>\n<li>\u2022 Retention analysis: who returns and why?</li>\n<li>\u2022 Engagement patterns: how do supporters evolve their giving?</li>\n<li>\u2022 Lifecycle segmentation: distinct supporter groups with different needs and potential</li>\n<li>\u2022 Churn understanding: what patterns precede supporter transition?</li>\n</ul>\n</div>\n<!-- Column 2 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Revenue performance assessment</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Channel performance across acquisition, retention, and revenue generation</li>\n<li>\u2022 Campaign contribution to new supporter acquisition and retention</li>\n<li>\u2022 Email and social engagement correlation with giving</li>\n<li>\u2022 Recurring giving patterns and opportunity areas</li>\n</ul>\n</div>\n<!-- Column 3 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M13 7h8m0 0v8m0-8l-8 8-4-4-6 6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Strategic insight translation</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Identify 5\u201310 actionable opportunities tied to your data patterns</li>\n<li>\u2022 Propose specific initiatives with projected revenue impact</li>\n<li>\u2022 Provide testing roadmap with clear hypotheses</li>\n</ul>\n</div>\n<!-- Column 4 -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Ongoing measurement and optimization</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Dashboard reflecting your key performance metrics</li>\n<li>\u2022 Regular reviews assessing progress and informing adjustments</li>\n<li>\u2022 Support for implementing experiments and tracking results</li>\n<li>\u2022 Continuous learning framework for your team</li>\n</ul>\n</div>\n</div>\n</div>\n</section>",
             "images": []
         },
@@ -80,7 +31,7 @@
         },
         {
             "type": "FOOTER",
-            "heading": "Page Footer",
+            "heading": "Footer",
             "content": "<div id=\"footer-placeholder\"></div>",
             "images": []
         }

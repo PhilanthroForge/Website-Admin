@@ -1,74 +1,19 @@
 {
     "metadata": {
-        "url": "https://www.philanthroforge.com/lets-talk",
+        "url": "https://www.philanthroforge.com/lets-talk.html",
         "title": "Let's Talk - PhilanthroForge",
         "slug": "lets-talk"
     },
     "content_blocks": [
         {
             "type": "HEADER",
-            "heading": "Page Header / Navigation",
+            "heading": "Navigation",
             "content": "<div id=\"navbar-placeholder\"></div>",
-            "images": [
-                {
-                    "src": "assets/Folder/Philanthro%20logo.png",
-                    "alt": "PhilanthroForge Logo"
-                },
-                {
-                    "src": "assets/index_digital_fundraising_strategywe_audit_you_philanthroforge_nonprofit_digital_fundra.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/index_fundraising_campaign_journey_design_philanthroforge_professional_nonprofit_f.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/services_listen_deeply_to_donors_and_data_img.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/index_website_donation_ux_optimization_philanthroforge_fundraising_advisory_exp.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/service-donation-form_form_redesign_img.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/index_csr_major_donor_support_philanthroforge_nonprofit_fundraising_ad.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/service-brand-identity_visual_identity_system_img.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/index_rewarding_generosity_unlocks_new_givingg_philanthroforge_nonprofit_fundraising_co.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/case-turning-supporters_content_img.jpg",
-                    "alt": ""
-                },
-                {
-                    "src": "assets/case-integrated-ecosystems_content_img.jpg",
-                    "alt": ""
-                }
-            ]
-        },
-        {
-            "type": "SECTION",
-            "heading": "Let's Talk",
-            "content": "<main class=\"flex-grow container mx-auto px-6 py-20\">\n<div class=\"max-w-4xl mx-auto text-center mb-12\">\n<h1 class=\"text-4xl md:text-5xl font-bold text-primary mb-6\">Let's Talk</h1>\n<p class=\"text-xl text-gray-600\">Schedule a free consultation to discuss your fundraising strategy.</p>\n</div>\n<!-- Google Calendar Embed -->\n<div class=\"max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden border border-gray-200\">\n<!-- Google Calendar Appointment Scheduling begin -->\n<iframe frameborder=\"0\" height=\"600\" src=\"https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xlmQaP8g_8UVWPxMGt6ZLG3Q836-t0PQxJkhLXU29kr3tbW5fJh9OSA8Cxvss-hD5otx5HVQ3?gv=true\" style=\"border: 0\" width=\"100%\"></iframe>\n<!-- end Google Calendar Appointment Scheduling -->\n</div>\n</main>",
             "images": []
         },
         {
             "type": "FOOTER",
-            "heading": "Page Footer",
+            "heading": "Footer",
             "content": "<div id=\"footer-placeholder\"></div>",
             "images": []
         }

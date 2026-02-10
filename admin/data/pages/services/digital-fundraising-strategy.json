@@ -1,74 +1,25 @@
 {
     "metadata": {
-        "url": "https://www.philanthroforge.com/services/digital-fundraising-strategy",
+        "url": "https://www.philanthroforge.com/services/digital-fundraising-strategy.html",
         "title": "Digital Fundraising Strategy - PhilanthroForge",
         "slug": "services/digital-fundraising-strategy"
     },
     "content_blocks": [
         {
             "type": "HEADER",
-            "heading": "Page Header / Navigation",
+            "heading": "Navigation",
             "content": "<div id=\"navbar-placeholder\"></div>",
-            "images": [
-                {
-                    "src": "../assets/Folder/Philanthro%20logo.png",
-                    "alt": "PhilanthroForge Logo"
-                },
-                {
-                    "src": "../assets/index_digital_fundraising_strategy_philanthroforge_nonprofit_fundraising_co.jpg",
-                    "alt": "Digital Fundraising Strategy"
-                },
-                {
-                    "src": "../assets/index_fundraising_consultancy_advisory_philanthroforge_fundraising_advisory_exp.jpg",
-                    "alt": "Consultancy & Advisory"
-                },
-                {
-                    "src": "../assets/index_website_donation_optimization_philanthroforge_nonprofit_web_design_do.jpg",
-                    "alt": "Website & Donation Optimization"
-                },
-                {
-                    "src": "../assets/index_donation_form_optimization_philanthroforge_increase_donations_user_e.jpg",
-                    "alt": "Donation Form Optimization"
-                },
-                {
-                    "src": "../assets/index_fundraising_campaign_journey_design_philanthroforge_donor_journey.jpg",
-                    "alt": "Fundraising Campaign Design"
-                },
-                {
-                    "src": "../assets/index_donor_behaviour_analysis_revenue_growth_philanthroforge_data_driven.jpg",
-                    "alt": "Donor Behaviour Analysis"
-                },
-                {
-                    "src": "../assets/index_csr_major_donor_support_philanthroforge_corporate_partnerships.jpg",
-                    "alt": "CSR & Major Donor Support"
-                },
-                {
-                    "src": "../assets/index_brand_identity_impact_communication_philanthroforge_nonprofit_brandi.jpg",
-                    "alt": "Brand Identity"
-                },
-                {
-                    "src": "../assets/index_rewarding_generosity_unlocks_new_givingg.jpg",
-                    "alt": "Rewarding Generosity"
-                },
-                {
-                    "src": "../assets/index_turning_supporters_into_active_fundraisers.jpg",
-                    "alt": "Turning Supporters Into Fundraisers"
-                },
-                {
-                    "src": "../assets/index_integrated_ecosystems_seamless_nonprofit_tech_stack_inte.jpg",
-                    "alt": "Integrated Ecosystems"
-                }
-            ]
+            "images": []
         },
         {
             "type": "SECTION",
-            "heading": "Digital Fundraising Strategy built on clarity.",
+            "heading": "Section 1",
             "content": "<section class=\"py-20 bg-gray-50\">\n<div class=\"container-padded max-w-4xl mx-auto text-center\">\n<h1 class=\"text-4xl md:text-5xl font-bold text-primary mb-6\">Digital Fundraising Strategy built on clarity.</h1>\n<p class=\"text-xl text-gray-600 leading-relaxed\">\n          Understand your complete fundraising system, identify the highest-leverage opportunities, and build a roadmap\n          for predictable growth.\n        </p>\n</div>\n</section>",
             "images": []
         },
         {
             "type": "SECTION",
-            "heading": "We map your fundraising system comprehensively, th",
+            "heading": "Comprehensive Audit",
             "content": "<section class=\"py-20\">\n<div class=\"container-padded container mx-auto\">\n<h2 class=\"text-3xl font-bold text-center text-primary mb-16 max-w-3xl mx-auto\">\n          We map your fundraising system comprehensively, then chart a strategic path forward.\n        </h2>\n<div class=\"grid md:grid-cols-3 gap-12\">\n<!-- Column 1: Comprehensive Audit -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Comprehensive Audit</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Website structure and donor navigation experience</li>\n<li>\u2022 Donation pages, forms, and conversion workflows</li>\n<li>\u2022 Email strategy, list health, and journey design</li>\n<li>\u2022 Social presence and engagement patterns</li>\n<li>\u2022 Campaign performance analysis (12\u201324 months)</li>\n<li>\u2022 Traffic sources and channel performance</li>\n<li>\u2022 Donor retention and lifecycle patterns</li>\n</ul>\n</div>\n<!-- Column 2: Strategic Analysis -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Strategic Analysis &amp; Improvements</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 Identify high-potential opportunities across the funnel</li>\n<li>\u2022 Understand where supporters experience friction</li>\n<li>\u2022 Recognize what's working well and where to build momentum</li>\n<li>\u2022 Assess resource allocation across channels</li>\n</ul>\n</div>\n<!-- Column 3: Build Actionable Roadmap -->\n<div class=\"bg-white p-8 rounded-lg shadow-sm border border-gray-100\">\n<div class=\"w-12 h-12 bg-pale-yellow rounded-lg flex items-center justify-center mb-6 text-primary\">\n<svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewbox=\"0 0 24 24\">\n<path d=\"M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-.553-.894L15 4m0 13V4m0 0L9 7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\">\n</path>\n</svg>\n</div>\n<h3 class=\"text-xl font-bold text-primary mb-4\">Build Actionable Roadmap</h3>\n<ul class=\"space-y-3 text-gray-600 text-sm\">\n<li>\u2022 6\u201312 month strategic plan with clear priorities</li>\n<li>\u2022 Tiered approach: \"foundation improvements / growth initiatives / advanced optimization\"</li>\n<li>\u2022 Projected revenue impact and realistic timelines</li>\n<li>\u2022 Resource requirements and phasing strategy</li>\n</ul>\n</div>\n</div>\n</div>\n</section>",
             "images": []
         },
@@ -80,7 +31,7 @@
         },
         {
             "type": "FOOTER",
-            "heading": "Page Footer",
+            "heading": "Footer",
             "content": "<div id=\"footer-placeholder\"></div>",
             "images": []
         }

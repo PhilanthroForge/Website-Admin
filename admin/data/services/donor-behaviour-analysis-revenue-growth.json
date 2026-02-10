@@ -1,38 +1,11 @@
 {
-  "service_id": "donor-behaviour-analysis-revenue-growth",
-  "title": "PhilanthroForge - Donor Behaviour Analysis & Revenue Growth",
-  "subtitle": "Understand supporter behaviour. Grow revenue strategically.",
-  "description": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n\n\nUnderstand your complete fundraising system, identify the highest-leverage opportunities, and build a roadmap for predictable growth.\n\n\n\nAcquisition patterns: where do your best supporters come from?Retention analysis: who returns and why?Engagement patterns: how do supporters evolve their giving?Lifecycle segmentation: distinct supporter groups with different needs and potentialChurn understanding: what patterns precede supporter transition?\n\nAcquisition patterns: where do your best supporters come from?\n\nRetention analysis: who returns and why?\n\nEngagement patterns: how do supporters evolve their giving?\n\nLifecycle segmentation: distinct supporter groups with different needs and potential\n\nChurn understanding: what patterns precede supporter transition?\n\n\n\nChannel performance across acquisition, retention, and revenue generationCampaign contribution to new supporter acquisition and retentionEmail and social engagement correlation with givingRecurring giving patterns and opportunity areas\n\nChannel performance across acquisition, retention, and revenue generation\n\nCampaign contribution to new supporter acquisition and retention\n\nEmail and social engagement correlation with giving\n\nRecurring giving patterns and opportunity areas\n\n\n\nIdentify 5–10 actionable opportunities tied to your data patternsPropose specific initiatives with projected revenue impactProvide testing roadmap with clear hypotheses\n\nIdentify 5–10 actionable opportunities tied to your data patterns\n\nPropose specific initiatives with projected revenue impact\n\nProvide testing roadmap with clear hypotheses\n\n\n\nDashboard reflecting your key performance metricsRegular reviews assessing progress and informing adjustmentsSupport for implementing experiments and tracking resultsContinuous learning framework for your team\n\nDashboard reflecting your key performance metrics\n\nRegular reviews assessing progress and informing adjustments\n\nSupport for implementing experiments and tracking results\n\nContinuous learning framework for your team\n\n\n\nSee your fundraising system with fresh perspective\n\n\n\nGet free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nA diagnostic starts with understanding where you are. Let's schedule a call to discuss your goals and what a roadmap could look like for your organization.\n\nBook Now\n\n\n\nBook Now",
-  "features": [
-    {
-      "title": "Your data holds insights that can strengthen every fundraising decision.",
-      "description": ""
-    },
-    {
-      "title": "You collect giving data, but deeper analysis could reveal actionable patterns.",
-      "description": ""
-    },
-    {
-      "title": "Understanding supporter behaviour (acquisition, retention, upgrade patterns) informs better strategy.",
-      "description": ""
-    },
-    {
-      "title": "You run campaigns and experiments, but systematic measurement strengthens future decisions.",
-      "description": ""
-    },
-    {
-      "title": "Predictable revenue growth emerges from understanding your supporter base.",
-      "description": ""
-    },
-    {
-      "title": "We translate giving patterns into strategic insights and measurable improvements.",
-      "description": ""
-    }
-  ],
-  "icon": "",
-  "image": "",
-  "status": "published",
-  "order": 0,
-  "created_at": "2026-02-09T10:32:10.644778",
-  "updated_at": "2026-02-09T10:32:10.644780"
+    "id": "donor-behaviour-analysis-revenue-growth",
+    "title": "Donor Behaviour Analysis",
+    "subtitle": "Understand supporter behaviour. Grow revenue\n     strategically.",
+    "description": "Understand your complete fundraising system, identify the highest-leverage opportunities, and build a roadmap\n          for predictable growth.",
+    "image": "",
+    "url": "services/donor-behaviour-analysis-revenue-growth.html",
+    "status": "published",
+    "order": 0,
+    "features": []
 }

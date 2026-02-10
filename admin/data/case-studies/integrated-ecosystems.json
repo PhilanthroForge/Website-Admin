@@ -1,18 +1,16 @@
 {
-  "case_study_id": "integrated-ecosystems",
-  "title": "PhilanthroForge - Integrated Ecosystems",
-  "client": "page start",
-  "challenge": "Details coming soon",
-  "solution": "Details coming soon",
-  "results": "How an impact platform aligned nonprofits, donors, and investors around one shared interface\n\nA Founding team envisioned a full “impact ecosystem” where nonprofits, donors, and impact‑aligned investors could all meet. Initially, the mission statement looked impressive on paper, but it wasn’t clear how it would translate into an actual product. The risk: building an expensive platform that no one quite understood or used.\n\nChallenges\n\nIs a custom, multi‑role web app necessary from day one, or can we start with lighter tooling?\n\nHow do we design the system so each audience (nonprofit, donor, investor) instantly sees where they fit?\n\nWhat should be tested first: fundraising flows, reporting dashboards, or investment pipelines?\n\nWhich early adopters and channels will provide the most honest, useful feedback?\n\nWhat PhilanthroForge did\n\nCo‑created a sharper product thesis: what the ecosystem does now vs. what’s intentionally in the future roadmap.\n\nDesigned a website architecture with distinct paths for nonprofits, donors, and investors, unified by a simple story about aligned incentives and measurable impact.\n\nCrafted onboarding flows and explainer content to minimize cognitive load and reduce drop‑off.\n\nDeveloped a cross‑channel narrative (website, email, LinkedIn, YouTube, Medium, social) that told consistent stories instead of fragmented messages.\n\nBuilt and ran multi‑channel campaigns—email, LinkedIn, and social—to recruit nonprofits and activate their supporters.\n\nHelped define test cohorts and feedback loops so the early product could evolve based on real‑world use.\n\nResults\n\nTurned a complex, multi‑stakeholder vision into a clear, navigable digital experience.\n\nPositioned the platform credibly in the impact‑tech space, making it attractive for pilots and partnerships.\n\nBuilt a flexible foundation—UX, messaging, and systems—that can support future functionality without constant reinvention.\n\nTakeaways\n\nBig, ecosystem‑level ideas don’t fail for lack of ambition; they fail because users can’t see where they fit. Thoughtful system design and staged testing make it possible to launch something clear today that can still grow into the long‑term vision.",
-  "testimonial": {
-    "quote": "",
-    "author": "",
-    "position": ""
-  },
-  "image": "",
-  "status": "published",
-  "order": 0,
-  "created_at": "2026-02-09T10:32:10.648580",
-  "updated_at": "2026-02-09T10:32:10.648583"
+    "id": "integrated-ecosystems",
+    "title": "Integrated Ecosystems",
+    "subtitle": "",
+    "description": "",
+    "image": "",
+    "url": "case-studies/integrated-ecosystems.html",
+    "status": "published",
+    "order": 0,
+    "features": [],
+    "client": "Client Name",
+    "industry": "Non-Profit",
+    "challenge": "Challenge details...",
+    "solution": "Solution details...",
+    "results": []
 }

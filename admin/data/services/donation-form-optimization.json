@@ -1,38 +1,11 @@
 {
-  "service_id": "donation-form-optimization",
-  "title": "PhilanthroForge - Donation Form Optimization",
-  "subtitle": "Donation forms refined for completion and clarity.",
-  "description": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n\n\nThoughtful form design removes friction and strengthens supporter experience.\n\n\n\nComprehensive review of current form structure and experienceAssessment of field necessity and copy clarityLoad time and mobile experience evaluationCurrent completion rate baseline and opportunity analysis\n\nComprehensive review of current form structure and experience\n\nAssessment of field necessity and copy clarity\n\nLoad time and mobile experience evaluation\n\nCurrent completion rate baseline and opportunity analysis\n\n\n\nIStreamlined field structure removing unnecessary information requestsLogical field ordering that respects natural donor thinkingSimplified, clear labeling and help textSmart defaults that respect donor preferencesTransparent information about what happens next\n\nIStreamlined field structure removing unnecessary information requests\n\nLogical field ordering that respects natural donor thinking\n\nSimplified, clear labeling and help text\n\nSmart defaults that respect donor preferences\n\nTransparent information about what happens next\n\n\n\nSecurity information presented reassuringlyPrivacy considerations clearly addressedConfirmation messaging that feels warm and appreciativePost-donation email preview\n\nSecurity information presented reassuringly\n\nPrivacy considerations clearly addressed\n\nConfirmation messaging that feels warm and appreciative\n\nPost-donation email preview\n\n\n\n3–5 specific tests (form structure, suggested amounts, frequency options, etc.)Clear hypotheses and measurement approachTimeline for testing and learning\n\n3–5 specific tests (form structure, suggested amounts, frequency options, etc.)\n\nClear hypotheses and measurement approach\n\nTimeline for testing and learning\n\n\n\nSee your fundraising system with fresh perspective\n\n\n\nGet free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nA diagnostic starts with understanding where you are. Let's schedule a call to discuss your goals and what a roadmap could look like for your organization.\n\nBook Now\n\n\n\nBook Now",
-  "features": [
-    {
-      "title": "Form design directly impacts completion rates and donor experience.",
-      "description": ""
-    },
-    {
-      "title": "Your donation form functions well, but optimization could improve completion rates.",
-      "description": ""
-    },
-    {
-      "title": "Supporters express interest but complete donations at lower-than-expected rates.",
-      "description": ""
-    },
-    {
-      "title": "You've never systematically tested form elements (fields, copy, flow).",
-      "description": ""
-    },
-    {
-      "title": "Form experience is often overlooked despite its direct impact on revenue.",
-      "description": ""
-    },
-    {
-      "title": "We refine every element of your donation form for clarity and ease",
-      "description": ""
-    }
-  ],
-  "icon": "",
-  "image": "",
-  "status": "published",
-  "order": 0,
-  "created_at": "2026-02-09T10:32:10.647095",
-  "updated_at": "2026-02-09T10:32:10.647096"
+    "id": "donation-form-optimization",
+    "title": "Donation Form Optimization",
+    "subtitle": "Donation forms refined for completion and clarity.",
+    "description": "Thoughtful form design removes friction and strengthens supporter experience.",
+    "image": "",
+    "url": "services/donation-form-optimization.html",
+    "status": "published",
+    "order": 0,
+    "features": []
 }
