@@ -7,9 +7,35 @@
     'use strict';
 
     // Determine component path based on current page depth
+    // Determine component path based on current page depth
     function getComponentPath(componentName) {
-        const depth = window.location.pathname.split('/').filter(Boolean).length - 1;
-        const prefix = depth === 0 ? '' : depth === 1 ? '../' : '../../';
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        // If empty (root) or index.html in root, depth is 0
+        const isRoot = parts.length === 0 || (parts.length === 1 && parts[0] === 'index.html');
+        const depth = isRoot ? 0 : parts.length - 1;
+        // Adjust for /services/service-name.html -> depth 1
+
+        // Simpler approach: count / excluding the first one?
+        // Let's stick to valid relative logic
+        let pathPrefix = '';
+        if (parts.length > 0 && parts[0] !== 'index.html') {
+            // For /about.html, depth 0. parts=['about.html']
+            // For /services/foo.html, depth 1. parts=['services', 'foo.html']
+            // Actually, relative path from /services/foo.html to /components/navbar.html is ../../components/navbar.html
+            // Wait, standard structure:
+            // /index.html -> components/navbar.html
+            // /services/foo.html -> ../components/navbar.html
+
+            // The old logic was: length - 1. 
+            // ['services', 'foo.html'] len 2 - 1 = 1. Prefix '../'. Correct.
+            // ['index.html'] len 1 - 1 = 0. Prefix ''. Correct.
+            // [] (Root) len 0 - 1 = -1. Prefix '../../' (by fallthrough). Incorrect.
+
+            // Fix: verify depth >= 0
+        }
+
+        const pathDepth = parts.length === 0 ? 0 : parts.length - 1;
+        const prefix = pathDepth <= 0 ? '' : pathDepth === 1 ? '../' : '../../';
         return `${prefix}components/${componentName}.html`;
     }
 
