@@ -114,6 +114,16 @@
 </head>
 
 <body class="bg-white text-gray-800 antialiased">
+    <!-- TEMPORARY: Admin Login Button -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+        <button onclick="window.netlifyIdentity && window.netlifyIdentity.open()"
+            style="background: #2c3e50; color: #f4d03f; padding: 12px 24px; border-radius: 8px; font-weight: bold; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'">
+            🔐 Admin Login
+        </button>
+    </div>
+    <!-- END TEMPORARY -->
     <div id="navbar-placeholder"></div>
     <header class="bg-white py-24 text-center relative overflow-hidden">
         <div class="container-padded relative z-10 max-w-4xl mx-auto">
