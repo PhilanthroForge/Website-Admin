@@ -1,0 +1,24 @@
+fragment PageParts on Page {
+  __typename
+  title
+  description
+  body
+}
+
+fragment ServiceParts on Service {
+  __typename
+  title
+  slug
+  description
+  icon
+  body
+}
+
+fragment CaseStudyParts on CaseStudy {
+  __typename
+  title
+  slug
+  excerpt
+  featuredImage
+  body
+}

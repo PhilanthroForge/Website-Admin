@@ -1,0 +1,238 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/home",
+        "title": "PhilanthroForge",
+        "slug": "index",
+        "parent_section": "root"
+    },
+    "content_blocks": [
+        {
+            "type": "intro",
+            "heading": "Page Start",
+            "text": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n",
+            "images": [
+                {
+                    "src": "assets/index__01_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 1
+                },
+                {
+                    "src": "assets/index__02_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Forging The Next Era of Fundraising",
+            "tag": "h3",
+            "text": "Free Consultation\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "We don\u2019t just run campaignsWe forge systems",
+            "tag": "h2",
+            "text": "Diagnose the strategy and the system\n\nWe audit your digital fundraising engine\u2014website, donation UX, forms, email, campaigns, CSR outreach, reports\u2014to see where attention, trust, and money are leaking.\n\nDesign and rebuild the critical pieces\n\nWe review your donation experience, forms, messaging, and donor journeys so each interaction\u2014from first visit to multi\u2011year giving\u2014feels intentional and frictionless.\n\nOptimize with data, not guesswork\n\nWe optimize your donor behaviour and revenue KPIs, design experiments, and help your team build a rhythm of continuous, evidence\u2011based optimization.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__03_we_dont_just_run_cam_philanthroforge_nonp.jpg",
+                    "alt": "Philanthroforge  Nonprofit Digital Fundraising Strategy NGOs",
+                    "order": 3
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Digital Fundraising Strategy",
+            "tag": "h2",
+            "text": "We audit your digital fundraising engine\u2014website, donation UX, forms, email, campaigns, CSR outreach, reports\u2014to see where attention, trust, and money are leaking.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__04_digital_fundraising__philanthroforge_nonp.jpg",
+                    "alt": "Philanthroforge Nonprofit fundraising consultancy team reviewing donor strategy for charity organization",
+                    "order": 4
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Fundraising Consultancy & Advisory",
+            "tag": "h2",
+            "text": "We optimize your donation experience, forms, messaging, and donor journeys so each interaction\u2014from first visit to multi\u2011year giving\u2014feels intentional and frictionless.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__05_fundraising_consulta_philanthroforge_fund.jpg",
+                    "alt": "Philanthroforge Fundraising advisory experts analyzing nonprofit donor journey optimization dashboard",
+                    "order": 5
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Donation Form Optimization",
+            "tag": "h2",
+            "text": "We track donor behaviour and revenue KPIs, design experiments, and help your team build a rhythm of continuous, evidence\u2011based optimization.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__06_donation_form_optimi_philanthroforge_nonp.jpg",
+                    "alt": "Philanthroforge Nonprofit fundraising consultancy team analyzing donor data dashboard",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Website & Donation UX Optimization",
+            "tag": "h2",
+            "text": "We audit your digital fundraising engine\u2014website, donation UX, forms, email, campaigns, CSR outreach, reports\u2014to see where attention, trust, and money are leaking.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__07_website_donation_ux__philanthroforge_fund.jpg",
+                    "alt": "Philanthroforge Fundraising advisory experts reviewing nonprofit campaign performance metrics",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Fundraising Campaign & Journey Design",
+            "tag": "h2",
+            "text": "We optimize your donation experience, forms, messaging, and donor journeys so each interaction\u2014from first visit to multi\u2011year giving\u2014feels intentional and frictionless.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__08_fundraising_campaign_philanthroforge_prof.jpg",
+                    "alt": "Philanthroforge Professional nonprofit fundraising consultants strategizing donor retention",
+                    "order": 8
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Donor Behaviour Analysis & Revenue Growth",
+            "tag": "h2",
+            "text": "We track donor behaviour and revenue KPIs, design experiments, and help your team build a rhythm of continuous, evidence\u2011based optimization.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__09_donor_behaviour_anal_philanthroforge_fund.jpg",
+                    "alt": "Philanthroforge Fundraising consultancy meeting discussing nonprofit revenue growth strategy",
+                    "order": 9
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "CSR & Major Donor Support",
+            "tag": "h2",
+            "text": "We audit your digital fundraising engine\u2014website, donation UX, forms, email, campaigns, CSR\n\noutreach, reports\u2014to see where attention, trust, and money are leaking.\n\n",
+            "images": [
+                {
+                    "src": "assets/index__10_csr_major_donor_supp_philanthroforge_nonp.jpg",
+                    "alt": "Philanthroforge Nonprofit fundraising advisory team reviewing donor journey optimization",
+                    "order": 10
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Brand, Identity & Impact Communication",
+            "tag": "h2",
+            "text": "We optimize your donation experience, forms, messaging, and donor journeys so each interaction\u2014from first visit to multi\u2011year giving\u2014feels intentional and frictionless.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "Most organizations aren\u2019t losing because their mission is weak. They\u2019re losing because their systems were never truly designed\u2014just patched together over years.",
+            "tag": "h3",
+            "text": "Donation pages convert at 1\u20132% when they could be 4\u20136%.Donors give once, then quietly disappear after the first campaign.Emails go out as \u201cblasts\u201d, but there\u2019s no real donor journey behind them.Events raise money, but don\u2019t create a long\u2011term donor pipeline.Leadership sees totals, but not the story behind the numbers.\n\nDonation pages convert at 1\u20132% when they could be 4\u20136%.\n\nDonors give once, then quietly disappear after the first campaign.\n\nEmails go out as \u201cblasts\u201d, but there\u2019s no real donor journey behind them.\n\nEvents raise money, but don\u2019t create a long\u2011term donor pipeline.\n\nLeadership sees totals, but not the story behind the numbers.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "How Philanthro-Forged Systems Look Like",
+            "tag": "h2",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/index__11_how_philanthro_forge_philanthroforge_nonp.jpg",
+                    "alt": "Philanthroforge Nonprofit fundraising consultants helping charity increase donations 35%",
+                    "order": 11
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Learn More",
+            "tag": "h2",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/index__12_learn_more_philanthroforge_fund.jpg",
+                    "alt": "Philanthroforge Fundraising advisory session optimizing nonprofit donor acquisition funnel",
+                    "order": 12
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Learn More",
+            "tag": "h2",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/index__13_learn_more_philanthroforge_expe.jpg",
+                    "alt": "Philanthroforge Expert fundraising consultants auditing nonprofit campaign conversion rates",
+                    "order": 13
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Section: Results You Can Aim For",
+            "tag": "h2",
+            "text": "What a forged fundraising system can unlock.\n\nHigher donation completion: 2\u20133x more visitors finish their gift.Stronger recurring base: more donors choose monthly or yearly giving.Better retention: donors stay for 3\u20135 years instead of just one campaign.Campaigns that compound: each major campaign leaves you with a bigger, warmer audience for the next one.Leadership clarity: clear dashboards and stories that explain why revenue is moving, not just how much.\n\nHigher donation completion: 2\u20133x more visitors finish their gift.\n\nStronger recurring base: more donors choose monthly or yearly giving.\n\nBetter retention: donors stay for 3\u20135 years instead of just one campaign.\n\nCampaigns that compound: each major campaign leaves you with a bigger, warmer audience for the next one.\n\nLeadership clarity: clear dashboards and stories that explain why revenue is moving, not just how much.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "Book your free consultation now",
+            "tag": "h2",
+            "text": "Get free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nBook Now\n\n",
+            "images": [
+                {
+                    "src": "assets/index__14_book_your_free_consu_philanthroforge_phil.jpg",
+                    "alt": "Philanthroforge PhilanthroForge Forging The Next Era of Fundraising",
+                    "order": 14
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "PhilanthroForge",
+            "tag": "h2",
+            "text": "Forging The Next Era of Fundraising\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "PhilanthroForgeForging The Next Era of Fundraising",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/index__15_philanthroforgeforgi_linkedin.jpg",
+                    "alt": "LinkedIn",
+                    "order": 15
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Schedule a Meeting",
+            "tag": "h3",
+            "text": "Book Now\n\n",
+            "images": []
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/case-studies/integrated-ecosystems",
+        "title": "PhilanthroForge - Integrated Ecosystems",
+        "slug": "case-studies_integrated-ecosystems",
+        "parent_section": "case-studies"
+    },
+    "content_blocks": [
+        {
+            "type": "intro",
+            "heading": "Page Start",
+            "text": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nCase Study\n\n",
+            "images": [
+                {
+                    "src": "assets/case-studies_integrated-ecosystems__01_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 1
+                },
+                {
+                    "src": "assets/case-studies_integrated-ecosystems__02_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Integrated ecosystems make complex impact simple",
+            "tag": "h1",
+            "text": "How an impact platform aligned nonprofits, donors, and investors around one shared interface\n\nA Founding team envisioned a full \u201cimpact ecosystem\u201d where nonprofits, donors, and impact\u2011aligned investors could all meet. Initially, the mission statement looked impressive on paper, but it wasn\u2019t clear how it would translate into an actual product. The risk: building an expensive platform that no one quite understood or used.\n\nChallenges\n\nIs a custom, multi\u2011role web app necessary from day one, or can we start with lighter tooling?\n\nHow do we design the system so each audience (nonprofit, donor, investor) instantly sees where they fit?\n\nWhat should be tested first: fundraising flows, reporting dashboards, or investment pipelines?\n\nWhich early adopters and channels will provide the most honest, useful feedback?\n\nWhat PhilanthroForge did\n\nCo\u2011created a sharper product thesis: what the ecosystem does now vs. what\u2019s intentionally in the future roadmap.\n\nDesigned a website architecture with distinct paths for nonprofits, donors, and investors, unified by a simple story about aligned incentives and measurable impact.\n\nCrafted onboarding flows and explainer content to minimize cognitive load and reduce drop\u2011off.\n\nDeveloped a cross\u2011channel narrative (website, email, LinkedIn, YouTube, Medium, social) that told consistent stories instead of fragmented messages.\n\nBuilt and ran multi\u2011channel campaigns\u2014email, LinkedIn, and social\u2014to recruit nonprofits and activate their supporters.\n\nHelped define test cohorts and feedback loops so the early product could evolve based on real\u2011world use.\n\nResults\n\nTurned a complex, multi\u2011stakeholder vision into a clear, navigable digital experience.\n\nPositioned the platform credibly in the impact\u2011tech space, making it attractive for pilots and partnerships.\n\nBuilt a flexible foundation\u2014UX, messaging, and systems\u2014that can support future functionality without constant reinvention.\n\nTakeaways\n\nBig, ecosystem\u2011level ideas don\u2019t fail for lack of ambition; they fail because users can\u2019t see where they fit. Thoughtful system design and staged testing make it possible to launch something clear today that can still grow into the long\u2011term vision.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "Book your free consultation now",
+            "tag": "h2",
+            "text": "Get free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nBook Now\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "PhilanthroForgeForging The Next Era of Fundraising",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/case-studies_integrated-ecosystems__03_philanthroforgeforgi_linkedin.jpg",
+                    "alt": "LinkedIn",
+                    "order": 3
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Schedule a Meeting",
+            "tag": "h3",
+            "text": "Book Now\n\n",
+            "images": []
+        }
+    ]
+}

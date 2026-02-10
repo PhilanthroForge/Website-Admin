@@ -1,0 +1,61 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/lets-talk",
+        "title": "PhilanthroForge - Lets Talk ",
+        "slug": "lets-talk",
+        "parent_section": "root"
+    },
+    "content_blocks": [
+        {
+            "type": "intro",
+            "heading": "Page Start",
+            "text": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n",
+            "images": [
+                {
+                    "src": "assets/lets-talk__01_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 1
+                },
+                {
+                    "src": "assets/lets-talk__02_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Let\u2019s see what your fundraising system could be",
+            "tag": "h1",
+            "text": "Whether you\u2019re planning a big campaign, rethinking your donation page, or just know that your digital fundraising should be performing better, let\u2019s start with a conversation.\n\nLet's Talk\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "Book your free consultation now",
+            "tag": "h2",
+            "text": "Get free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nBook Now\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "PhilanthroForgeForging The Next Era of Fundraising",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/lets-talk__03_philanthroforgeforgi_linkedin.jpg",
+                    "alt": "LinkedIn",
+                    "order": 3
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Schedule a Meeting",
+            "tag": "h3",
+            "text": "Book Now\n\n",
+            "images": []
+        }
+    ]
+}

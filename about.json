@@ -1,0 +1,151 @@
+{
+    "metadata": {
+        "url": "https://www.philanthroforge.com/about",
+        "title": "PhilanthroForge - About",
+        "slug": "about",
+        "parent_section": "root"
+    },
+    "content_blocks": [
+        {
+            "type": "intro",
+            "heading": "Page Start",
+            "text": "HomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk MoreHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\nHomeAboutServicesDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact CommunicationCase StudiesRewarding GenerosityTurning Supporters Into FundraisersIntegrated EcosystemsLets Talk\n\nDigital Fundraising StrategyConsultancy & AdvisoryWebsite & Donation OptimizationDonation Form OptimizationFundraising Campaign & Journey DesignDonor Behaviour Analysis & Revenue GrowthCSR & Major Donor SupportBrand Identity & Impact Communication\n\nRewarding GenerosityTurning Supporters Into FundraisersIntegrated Ecosystems\n\n",
+            "images": [
+                {
+                    "src": "assets/about__01_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 1
+                },
+                {
+                    "src": "assets/about__02_page_start_asset.jpg",
+                    "alt": "",
+                    "order": 2
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Our Story",
+            "tag": "h1",
+            "text": "Why PhilanthroForge Exists\n\nLets Do This Together\n\n",
+            "images": [
+                {
+                    "src": "assets/about__03_our_story_philanthroforge_nonp.jpg",
+                    "alt": "PhilanthroForge Nonprofit fundraising strategy consultants analyzing lifetime donor value",
+                    "order": 3
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Philanthropy has no shortage of generous people or urgent problems.",
+            "tag": "h2",
+            "text": "What it lacks is well\u2011designed systems that connect the two: digital experiences, journeys, and rhythms that make giving simple, meaningful, and repeatable.\n\nPhilanthropy has no shortage of generous people or urgent problems. What it lacks is well\u2011designed systems that connect the two: digital experiences, journeys, and rhythms that make giving simple, meaningful, and repeatable.\n\nAfter years working with donor platforms, impact startups, and nonprofit teams\u2014seeing money leak out through clunky donation flows, unclear messaging, and one\u2011off campaigns\u2014PhilanthroForge was created to focus on one thing: forging better digital fundraising systems for mission\u2011driven organizations.\n\n",
+            "images": [
+                {
+                    "src": "assets/about__04_philanthropy_has_no__philanthroforge_work.jpg",
+                    "alt": "PhilanthroForge Worked with platforms and organizations focused on donors, CSR, and social impact.",
+                    "order": 4
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Over the last 4 years, we have:",
+            "tag": "h3",
+            "text": "Worked with platforms and organizations focused on donors, CSR, and social impact.Designed donation journeys, campaigns, and content systems that have helped raise significant new revenue for nonprofits and social enterprises.Blended UX, storytelling, and data to help teams make decisions based on evidence rather than internal opinions.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "This mix of product, design, and fundraising experience shapes how PhilanthroForge works: listen deeply, map the system, find the highest\u2011leverage changes, and then iterate instead of guessing.",
+            "tag": "h3",
+            "text": "Linkedin\n\n@ PhilanthroForge, the focus is on designing fundraising systems that compound over time instead of one\u2011off campaigns that fade after launch. Every engagement is about building clear donor journeys, stronger retention, and sustainable recurring revenue so leaders can spend less time chasing the next rupee and more time delivering impact.\n\nShaanInnovation Manager: PhilanthroForge, Donor Money, SIR Giving, Impact EcosystemBoard Of AdvisorDonor Money, SIR Giving, Impact Ecosystem\n\n",
+            "images": [
+                {
+                    "src": "assets/about__05_this_mix_of_product__philanthroforge_md_s.jpg",
+                    "alt": "PhilanthroForge Md Shan'E Ali Fundraising Consultant",
+                    "order": 5
+                },
+                {
+                    "src": "assets/about__06_this_mix_of_product__philanthroforge_call.jpg",
+                    "alt": "PhilanthroForge call",
+                    "order": 6
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Free intro call",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/about__07_free_intro_call_philanthroforge_free.jpg",
+                    "alt": "PhilanthroForge free dignostics",
+                    "order": 7
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Diagnostic",
+            "tag": "h3",
+            "text": "A 30\u2011minute conversation about your mission, digital presence, and current fundraising challenges. You get an initial sense of where the leaks might be and whether we\u2019re the right partner.\n\nA 2\u20133 week engagement that produces the Funnel Diagnostic & Growth Blueprint. You can take it and implement in\u2011house, or continue with PhilanthroForge for build + optimization.\n\n",
+            "images": [
+                {
+                    "src": "assets/about__08_diagnostic_philanthroforge_deve.jpg",
+                    "alt": "PhilanthroForge Development of Donor Journey",
+                    "order": 8
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Build & implement",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/about__09_build_implement_philanthroforge_how_.jpg",
+                    "alt": "PhilanthroForge How to get more donations",
+                    "order": 9
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Optimize & handover",
+            "tag": "h3",
+            "text": "Depending on scope, 4\u201312 weeks of focused work: redesigning donation UX, forms, campaigns, journeys, decks, dashboards.\n\nWe test, measure, and refine. We document what\u2019s working and either stay on as an optimization partner or train your internal team to run the system confidently.\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "Book your free consultation now",
+            "tag": "h2",
+            "text": "Get free consultation for digital initiatives, insights on your target audiences and website performance analysis.\n\nBook Now\n\n",
+            "images": []
+        },
+        {
+            "type": "section",
+            "heading": "PhilanthroForgeForging The Next Era of Fundraising",
+            "tag": "h3",
+            "text": "",
+            "images": [
+                {
+                    "src": "assets/about__10_philanthroforgeforgi_linkedin.jpg",
+                    "alt": "LinkedIn",
+                    "order": 10
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "heading": "Schedule a Meeting",
+            "tag": "h3",
+            "text": "Book Now\n\n",
+            "images": []
+        }
+    ]
+}
