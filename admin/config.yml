@@ -1,0 +1,229 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Publish mode - editorial workflow gives you drafts
+publish_mode: simple
+
+# Media files
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Collections
+collections:
+  # Homepage
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "admin/data/pages/home.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "PhilanthroForge - Forging the Next Era of Non-Profit Fundraising" }
+          - label: "Content Blocks"
+            name: "content_blocks"
+            widget: "list"
+            types:
+              - label: "Header"
+                name: "HEADER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "HEADER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
+              - label: "Section"
+                name: "SECTION"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "SECTION" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "markdown" }
+                  - label: "Images"
+                    name: "images"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Image", name: "src", widget: "image" }
+                      - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Footer"
+                name: "FOOTER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "FOOTER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
+
+  # About Page
+  - name: "about"
+    label: "About Page"
+    files:
+      - label: "About"
+        name: "about"
+        file: "admin/data/pages/about.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - label: "Content Blocks"
+            name: "content_blocks"
+            widget: "list"
+            types:
+              - label: "Header"
+                name: "HEADER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "HEADER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
+              - label: "Section"
+                name: "SECTION"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "SECTION" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "markdown" }
+                  - label: "Images"
+                    name: "images"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Image", name: "src", widget: "image" }
+                      - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Footer"
+                name: "FOOTER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "FOOTER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
+
+  # Services
+  - name: "services"
+    label: "Services"
+    folder: "admin/data/pages/services"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - label: "Metadata"
+        name: "metadata"
+        widget: "object"
+        fields:
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Content Blocks"
+        name: "content_blocks"
+        widget: "list"
+        types:
+          - label: "Header"
+            name: "HEADER"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "HEADER" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "text" }
+          - label: "Section"
+            name: "SECTION"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "SECTION" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "markdown" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Footer"
+            name: "FOOTER"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "FOOTER" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "text" }
+
+  # Case Studies
+  - name: "case-studies"
+    label: "Case Studies"
+    folder: "admin/data/pages/case-studies"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - label: "Metadata"
+        name: "metadata"
+        widget: "object"
+        fields:
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Content Blocks"
+        name: "content_blocks"
+        widget: "list"
+        types:
+          - label: "Header"
+            name: "HEADER"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "HEADER" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "text" }
+          - label: "Section"
+            name: "SECTION"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "SECTION" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "markdown" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "Footer"
+            name: "FOOTER"
+            widget: "object"
+            fields:
+              - { label: "Type", name: "type", widget: "hidden", default: "FOOTER" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Content (HTML)", name: "content", widget: "text" }
+
+  # Contact Page
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - label: "Let's Talk"
+        name: "lets-talk"
+        file: "admin/data/pages/lets-talk.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - label: "Content Blocks"
+            name: "content_blocks"
+            widget: "list"
+            types:
+              - label: "Header"
+                name: "HEADER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "HEADER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
+              - label: "Section"
+                name: "SECTION"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "SECTION" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "markdown" }
+              - label: "Footer"
+                name: "FOOTER"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "FOOTER" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content (HTML)", name: "content", widget: "text" }
