@@ -5,7 +5,7 @@ Update HTML asset references to new paths
 import re
 from pathlib import Path
 
-BASE_DIR = Path("/Users/bipashahalder/Documents/Philanthroforge_Complete_Clone")
+BASE_DIR = Path(__file__).resolve().parent
 
 # Old path -> New path mapping
 REPLACEMENTS = {
