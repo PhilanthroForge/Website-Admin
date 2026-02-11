@@ -6,7 +6,7 @@ echo "PhilanthroForge Admin Panel Setup"
 echo "============================================================="
 echo ""
 
-cd /Users/bipashahalder/Documents/Philanthroforge_Complete_Clone/admin
+cd "$(dirname "$0")"
 
 # Check if Python 3 is installed
 if ! command -v python3 &> /dev/null; then
